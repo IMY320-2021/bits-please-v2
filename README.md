@@ -1,3 +1,42 @@
+# Bits-Please
+An ecommerce’s website for our self-made content creation company.
+
+## Code Style Guide
+
+### File Naming
+For all files and classes, use `PascalCase`.
+```
+FileName.js
+```
+
+### Folder Structure
+```
+├ src
+├── assets              // Folder for all assets (for e.g., images, icons, etc.)
+├── components
+├──── ComponentName     // Separate folder for each component
+├────── Component.css
+├────── Component.js
+├── pages
+├──── PageName          // Separate folder for each page
+├────── Page.css
+├────── Page.js
+├ App.css
+├ App.js
+├ index.css
+├ index.js
+```
+
+## Branching Strategy
+
+```
+├ main
+├── develop
+├──── develop_feature/feature-name
+├── fix
+├──── develop_fix/fix-name
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -39,32 +78,56 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Available Scripts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In the project directory, you can run:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `npm start`
 
-### Code Splitting
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-### Analyzing the Bundle Size
+### `npm test`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Making a Progressive Web App
+### `npm run build`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Advanced Configuration
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Deployment
+### `npm run eject`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-### `yarn build` fails to minify
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+### `npm run predeploy`
+
+Is automatically executed before `deploy` is executed.
+Simply runs `npm run build`.
+
+### `npm run deploy`
+
+Builds the app for production to the `build` folder.
+The project is then published to GitHub Pages, where it will be hosted for in a production environemnt.
+
+To view the deployment, open [https://imy320-2021.github.io/Bits-Please/](https://imy320-2021.github.io/Bits-Please/) in your browser.
+
+### `npm run lint`
+
+Runs `eslint` on the `src` folder. `eslint` is set up to use the recommended React settings.
+Additionally, `eslint` will attempt to fix trivial errors.
