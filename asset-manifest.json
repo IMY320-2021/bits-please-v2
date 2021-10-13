@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/bits-please-v2/static/css/main.3df48522.chunk.css",
+    "main.js": "/bits-please-v2/static/js/main.945202bd.chunk.js",
+    "main.js.map": "/bits-please-v2/static/js/main.945202bd.chunk.js.map",
+    "runtime-main.js": "/bits-please-v2/static/js/runtime-main.3737c355.js",
+    "runtime-main.js.map": "/bits-please-v2/static/js/runtime-main.3737c355.js.map",
+    "static/js/2.9e9b6e34.chunk.js": "/bits-please-v2/static/js/2.9e9b6e34.chunk.js",
+    "static/js/2.9e9b6e34.chunk.js.map": "/bits-please-v2/static/js/2.9e9b6e34.chunk.js.map",
+    "static/js/3.4dd8664e.chunk.js": "/bits-please-v2/static/js/3.4dd8664e.chunk.js",
+    "static/js/3.4dd8664e.chunk.js.map": "/bits-please-v2/static/js/3.4dd8664e.chunk.js.map",
+    "index.html": "/bits-please-v2/index.html",
+    "static/css/main.3df48522.chunk.css.map": "/bits-please-v2/static/css/main.3df48522.chunk.css.map",
+    "static/js/2.9e9b6e34.chunk.js.LICENSE.txt": "/bits-please-v2/static/js/2.9e9b6e34.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3737c355.js",
+    "static/js/2.9e9b6e34.chunk.js",
+    "static/css/main.3df48522.chunk.css",
+    "static/js/main.945202bd.chunk.js"
+  ]
+}
