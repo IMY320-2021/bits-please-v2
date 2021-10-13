@@ -1,15 +1,10 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
 import "./Layout.css";
 
-class Layout extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Heading 1</h1>
-      </div>
-    );
-  }
-}
+const Layout = ({ children }) => {
+  return <div>{children}</div>;
+};
 
 export default Layout;
