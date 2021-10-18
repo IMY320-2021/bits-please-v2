@@ -8,7 +8,9 @@ class Card extends React.Component {
     return (
       <div className="card">
         <div className="card-header">
-          <div className="card-image"></div>
+          <div className="card-image">
+            <h1>IMG</h1>
+          </div>
         </div>
         <div className="card-body">
           <h2>{data.title}</h2>

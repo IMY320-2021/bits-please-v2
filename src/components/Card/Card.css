@@ -1,0 +1,9 @@
+.card {
+  background-color: #292929;
+}
+
+.card-image {
+  width: 100%;
+  max-width: 321px;
+  background-color: rebeccapurple;
+}
