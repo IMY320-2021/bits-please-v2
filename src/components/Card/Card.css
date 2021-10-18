@@ -2,8 +2,13 @@
   background-color: #292929;
 }
 
+.card-body {
+  padding: var(--spacing-8);
+}
+
 .card-image {
+  max-height: 414px;
+  height: 100%;
   width: 100%;
-  max-width: 321px;
-  background-color: rebeccapurple;
+  background-color: var(--color-neon-purple);
 }

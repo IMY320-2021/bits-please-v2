@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import CustomRadioGroup from "../CustomRadioGroup/CustomRadioGroup";
 import "./Card.css";
 
 class Card extends React.Component {
@@ -13,10 +14,11 @@ class Card extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <h2>{data.title}</h2>
+          <h3>{data.title}</h3>
           <p>{data.description}</p>
           <h2 className="price-heading">R {data.price}</h2>
-          <h3>Color</h3>
+          {/* <h5>Color</h5> */}
+          <CustomRadioGroup data={data.options} />
           <button className="btn btn-primary" type="button">
             ADD TO CART
           </button>
