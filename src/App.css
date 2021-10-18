@@ -76,14 +76,17 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #000033;
-  --color-text: #2e353f;
-  --color-text-light: #707070;
-  --color-heading: #000033;
+  --color-primary: #ffffff;
+  --color-text: #ffffff;
+  --color-text-light: #ffffff;
+  --color-heading: #98ff00;
   --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-accent: #ffffff;
+  --color-neon-green: #98ff00;
+  --color-neon-blue: #00ffff;
+  --color-neon-purple: #bc13fe;
 
-  --color-background: #f0f0f0;
+  --color-background: #131313;
   --color-white: #ffffff;
 
   --icon-width: 47px;
@@ -273,3 +276,61 @@ a:focus {
 html {
   background-color: var(--color-background);
 }
+
+.App:after {
+  content: "";
+  /* background-image: url('./assets/images/seamless_paper_texture/seamless_paper_texture.png'); */
+  background-image: url("./assets/images/vhs-overlay.png");
+  animation: grain 10s steps(100) infinite;
+  height: 300%;
+  left: -50%;
+  opacity: 0.03;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0%, -10%);
+  }
+}
+
+/* @keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+} */
