@@ -76,7 +76,7 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #ffffff;
+  --color-primary: #c4c4c4;
   --color-text: #ffffff;
   --color-text-light: #ffffff;
   --color-text-dark: #131313;
@@ -281,8 +281,8 @@ html {
 
 /* Buttons */
 button {
-  background-color: var(--color-neon-purple);
-  color: var(--color-text);
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
   border: none;
   padding: var(--spacing-4) var(--spacing-8);
   text-align: center;
@@ -292,6 +292,7 @@ button {
 
 button:hover {
   cursor: pointer;
+  background-color: var(--color-neon-purple);
 }
 
 .App::after {
