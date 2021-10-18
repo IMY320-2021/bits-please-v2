@@ -13,7 +13,10 @@ const StoreData = {
         "/media/images/shop/mug.jpg",
         "../../../public/media/images/shop/mug.jpg",
       ],
-      options: ["XS", "S ", "M", "L ", "XL"],
+      options: [
+        { id: "mg-01-330", stock: true, option: "330ml" },
+        { id: "mg-01-550", stock: true, option: "500ml" },
+      ],
     },
     {
       id: "hd-01",
@@ -24,7 +27,13 @@ const StoreData = {
         "/media/images/shop/hoodie.jpg",
         "../../../public/media/images/shop/hoodie.jpg",
       ],
-      options: ["XS", "S ", "M", "L ", "XL"],
+      options: [
+        { id: "hd-01-xs", stock: true, option: "XS" },
+        { id: "hd-01-s", stock: true, option: "S" },
+        { id: "hd-01-m", stock: true, option: "M" },
+        { id: "hd-01-l", stock: true, option: "L" },
+        { id: "hd-01-xl", stock: true, option: "XL" },
+      ],
     },
     {
       id: "s-ts-01",
@@ -35,7 +44,13 @@ const StoreData = {
         "/media/images/shop/short-tshirt.jpg",
         "../../../public/media/images/shop/short-tshirt.jpg",
       ],
-      options: ["XS", "S ", "M", "L ", "XL"],
+      options: [
+        { id: "s-ts-01-xs", stock: true, option: "XS" },
+        { id: "s-ts-01-s", stock: true, option: "S" },
+        { id: "s-ts-01-m", stock: true, option: "M" },
+        { id: "s-ts-01-l", stock: true, option: "L" },
+        { id: "s-ts-01-xl", stock: true, option: "XL" },
+      ],
     },
     {
       id: "l-ts-01",
@@ -46,13 +61,19 @@ const StoreData = {
         "/media/images/shop/long-tshirt.jpg",
         "../../../public/media/images/shop/long-tshirt.jpg",
       ],
-      options: ["XS", "S ", "M", "L ", "XL"],
+      options: [
+        { id: "ls-ts-01-s", stock: true, option: "S" },
+        { id: "ls-ts-01-m", stock: true, option: "M" },
+        { id: "ls-ts-01-l", stock: true, option: "L" },
+        { id: "ls-ts-01-xl", stock: true, option: "XL" },
+      ],
     },
   ],
 };
 
 class CardContainer extends React.Component {
   render() {
+    console.log(StoreData);
     return (
       <div className="card-container">
         {StoreData.data.map((item) => {
