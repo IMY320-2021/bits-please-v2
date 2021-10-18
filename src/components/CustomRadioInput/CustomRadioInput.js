@@ -7,7 +7,7 @@ class CustomRadioInput extends React.Component {
     return (
       <React.Fragment>
         <div className="custom-radio-input">
-          <button>{this.props.title}</button>
+          <div>{this.props.data.option}</div>
         </div>
       </React.Fragment>
     );
