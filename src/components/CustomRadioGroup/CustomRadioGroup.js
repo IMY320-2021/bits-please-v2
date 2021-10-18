@@ -20,7 +20,7 @@ class CustomRadioGroup extends React.Component {
 }
 
 CustomRadioGroup.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.array,
 };
 
 export default CustomRadioGroup;

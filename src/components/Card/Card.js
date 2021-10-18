@@ -1,11 +1,12 @@
-/* eslint-disable react/prop-types */
 import React from "react";
+import PropTypes from "prop-types";
 import CustomRadioGroup from "../CustomRadioGroup/CustomRadioGroup";
 import "./Card.css";
 
 class Card extends React.Component {
   render() {
     const data = this.props.data;
+
     return (
       <div className="card">
         <div className="card-header">
@@ -27,5 +28,9 @@ class Card extends React.Component {
     );
   }
 }
+
+Card.propTypes = {
+  data: PropTypes.object,
+};
 
 export default Card;

@@ -4,7 +4,6 @@ import "./CustomRadioInput.css";
 
 class CustomRadioInput extends React.Component {
   render() {
-    console.log(this.props.data);
     return (
       <React.Fragment>
         <div className="custom-radio-input">

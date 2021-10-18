@@ -73,7 +73,6 @@ const StoreData = {
 
 class CardContainer extends React.Component {
   render() {
-    console.log(StoreData);
     return (
       <div className="card-container">
         {StoreData.data.map((item) => {
