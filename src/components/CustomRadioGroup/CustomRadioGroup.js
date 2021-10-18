@@ -7,12 +7,17 @@ class CustomRadioGroup extends React.Component {
   render() {
     const data = this.props.data;
 
+    console.log(data);
+
     return (
-      <div className="custom-radio-group">
-        {data.map((option) => {
-          return <CustomRadioInput key={option.id} data={option} />;
-        })}
-      </div>
+      <React.Fragment>
+        <h5>Options</h5>
+        <div className="custom-radio-group">
+          {data.map((option) => {
+            return <CustomRadioInput key={option.id} data={option} />;
+          })}
+        </div>
+      </React.Fragment>
     );
   }
 }
