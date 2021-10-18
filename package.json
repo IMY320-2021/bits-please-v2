@@ -22,13 +22,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --fix ./src "
+    "lint": "eslint ./ --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest",
-      "eslint:recommended",
       "plugin:react/recommended"
     ]
   },
@@ -42,6 +43,22 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
     ]
   }
 }
