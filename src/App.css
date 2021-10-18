@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Kongtext;
+  src: url("./assets/kongtext-font/kongtext-regular.ttf");
+}
+
+@font-face {
+  font-family: PressStart2P;
+  src: url("./assets/press-start-2p-font/press-start-2p.ttf");
+}
+
+@font-face {
+  font-family: SerifPixel;
+  src: url("./assets/serif-pixel-7-font/serif-pixel-7.ttf");
+}
+
 :root {
   --maxWidth-none: "none";
   --maxWidth-xs: 20rem;
@@ -33,11 +48,11 @@
   --spacing-24: 6rem;
   --spacing-32: 8rem;
   --spacing-42: 10rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
+  --fontFamily-sans: PressStart2P, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
-    Times, serif;
+  --fontFamily-serif: SerifPixel, "Merriweather", "Georgia", Cambria,
+    "Times New Roman", Times, serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
