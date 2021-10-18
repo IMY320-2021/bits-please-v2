@@ -1,0 +1,14 @@
+.card {
+  background-color: #292929;
+}
+
+.card-body {
+  padding: var(--spacing-8);
+}
+
+.card-image {
+  max-height: 414px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-neon-purple);
+}

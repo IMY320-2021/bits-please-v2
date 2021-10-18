@@ -1,16 +1,16 @@
 @font-face {
   font-family: Kongtext;
-  src: url("./assets/kongtext-font/kongtext-regular.ttf");
+  src: url("./assets/fonts/kongtext-font/kongtext-regular.ttf");
 }
 
 @font-face {
   font-family: PressStart2P;
-  src: url("./assets/press-start-2p-font/press-start-2p.ttf");
+  src: url("./assets/fonts/press-start-2p-font/press-start-2p.ttf");
 }
 
 @font-face {
   font-family: SerifPixel;
-  src: url("./assets/serif-pixel-7-font/serif-pixel-7.ttf");
+  src: url("./assets/fonts/serif-pixel-7-font/serif-pixel-7.ttf");
 }
 
 :root {
@@ -76,12 +76,14 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #ffffff;
+  --color-primary: #c4c4c4;
   --color-text: #ffffff;
   --color-text-light: #ffffff;
+  --color-text-dark: #131313;
   --color-heading: #98ff00;
   --color-heading-black: black;
   --color-accent: #ffffff;
+
   --color-neon-green: #98ff00;
   --color-neon-blue: #00ffff;
   --color-neon-purple: #bc13fe;
@@ -277,15 +279,29 @@ html {
   background-color: var(--color-background);
 }
 
-.App:after {
-  content: "";
-  /* background-image: url('./assets/images/seamless_paper_texture/seamless_paper_texture.png'); */
+/* Buttons */
+button {
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+  border: none;
+  padding: var(--spacing-4) var(--spacing-8);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--color-neon-purple);
+}
+
+.App::after {
   background-image: url("./assets/images/vhs-overlay.png");
   animation: grain 10s steps(100) infinite;
   height: 300%;
   left: -50%;
   opacity: 0.03;
-  position: fixed;
+  position: absolute;
   top: -100%;
   width: 300%;
 }

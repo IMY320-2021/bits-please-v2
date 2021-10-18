@@ -1,0 +1,13 @@
+.custom-radio-input {
+  background-color: rebeccapurple;
+  width: 100%;
+  text-align: center;
+  padding: var(--spacing-2);
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+}
+
+.custom-radio-input.active {
+  color: var(--text-text);
+  background-color: var(--color-background);
+}
