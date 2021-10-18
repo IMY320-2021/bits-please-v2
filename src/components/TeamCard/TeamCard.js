@@ -5,9 +5,12 @@ import "./TeamCard.css";
 
 class TeamCard extends React.Component {
   render() {
+    const data = this.props.data;
+
+    console.log(data);
     return (
       <React.Fragment>
-        <h3>Christoff Linde</h3>
+        <h3>{data.name}</h3>
         <div className="team-image">img</div>
         <div className="social-links">
           <div className="social-link">
@@ -54,38 +57,33 @@ class TeamCard extends React.Component {
           </div>
         </div>
         <div className="bio">
-          <p>
-            Hard-working full-stack developer. My curiosity and dedication drive
-            me to expand my skill set by exploring new technologies and
-            concepts. By combining my strength in solving problems and my love
-            for being creative, I create one-of-a-kind software experiences.
-          </p>
+          <p>{data.bio}</p>
         </div>
         <div className="skills-list">
-          <div className="skill">
-            <h5>HTML &amp; CSS</h5>
-          </div>
-          <div className="skill">
-            <h5>JavaScript</h5>
-          </div>
-          <div className="skill">
-            <h5>C++</h5>
-          </div>
-          <div className="skill">
-            <h5>Git</h5>
-          </div>
-          <div className="skill">
-            <h5>Unreal Engine</h5>
-          </div>
-          <div className="skill">
-            <h5>DevOps</h5>
-          </div>
+          {data.skills.map((skill) => {
+            return (
+              <div key={skill} className="skill">
+                <h5>{skill}</h5>
+              </div>
+            );
+          })}
         </div>
       </React.Fragment>
     );
   }
 }
 
-TeamCard.propTypes = {};
+TeamCard.propTypes = {
+  data: PropTypes.shape({
+    name: PropTypes.string,
+    bio: PropTypes.string,
+    skills: PropTypes.arrayOf(PropTypes.string),
+    social: PropTypes.shape({
+      linkedin: PropTypes.string,
+      github: PropTypes.string,
+      email: PropTypes.string,
+    }),
+  }),
+};
 
 export default TeamCard;
