@@ -1,14 +1,11 @@
-/* eslint-disable react/prop-types */
 import React from "react";
+import PropTypes from "prop-types";
 import CustomRadioInput from "../CustomRadioInput/CustomRadioInput";
 import "./CustomRadioGroup.css";
 
 class CustomRadioGroup extends React.Component {
   render() {
     const data = this.props.data;
-
-    console.log(data);
-
     return (
       <React.Fragment>
         <h5>Options</h5>
@@ -21,5 +18,9 @@ class CustomRadioGroup extends React.Component {
     );
   }
 }
+
+CustomRadioGroup.propTypes = {
+  data: PropTypes.object,
+};
 
 export default CustomRadioGroup;

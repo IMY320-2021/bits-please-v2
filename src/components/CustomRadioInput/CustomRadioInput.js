@@ -1,9 +1,10 @@
-/* eslint-disable react/prop-types */
 import React from "react";
+import PropTypes from "prop-types";
 import "./CustomRadioInput.css";
 
 class CustomRadioInput extends React.Component {
   render() {
+    console.log(this.props.data);
     return (
       <React.Fragment>
         <div className="custom-radio-input">
@@ -13,5 +14,12 @@ class CustomRadioInput extends React.Component {
     );
   }
 }
+
+CustomRadioInput.propTypes = {
+  data: PropTypes.object,
+  id: PropTypes.string,
+  stock: PropTypes.bool,
+  option: PropTypes.string,
+};
 
 export default CustomRadioInput;
