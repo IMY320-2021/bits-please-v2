@@ -4,6 +4,8 @@ import "./index.css";
 import "./normalize.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "../node_modules/nes.css/css/nes.css";
+import "nes.css/css/nes.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
