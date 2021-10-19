@@ -6,54 +6,36 @@ export default function Home() {
   return (
     <div className="App">
       <Layout>
-        <h1 className="neonText">Bits Please</h1>
-        <ul>
-          <li>
-            <Link to="/Projects">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link to="/Shop">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Shop
-            </Link>
-          </li>
-          <li>
-            <Link to="/AboutUs">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link to="/OurTeam">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Our Team
-            </Link>
-          </li>
-          <li>
-            <Link to="/ContactUs">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Contact Us
-            </Link>
-          </li>
-        </ul>
+        <div>
+          <p className="title">Bits Please</p>
+          <ul>
+            <li>
+              <Link className="nes-btn" to="/Projects">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link className="nes-btn" to="/Shop">
+                Shop
+              </Link>
+            </li>
+            <li>
+              <Link className="nes-btn is-primary" to="/AboutUs">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link className="nes-btn  is-success" to="/OurTeam">
+                Our Team
+              </Link>
+            </li>
+            <li>
+              <Link className="nes-btn is-error" to="/ContactUs">
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </div>
       </Layout>
     </div>
   );
