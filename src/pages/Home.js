@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="App">
       <Layout>
-        <div>
+        <div className="nes-container with-title  is-centered  is-dark">
           <p className="title">Bits Please</p>
           <ul>
             <li>
