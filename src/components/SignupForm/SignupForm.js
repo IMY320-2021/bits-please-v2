@@ -1,22 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
-
-const validate = (values) => {
-  const errors = {};
-  if (!values.name) {
-    errors.name = "Required";
-  } else if (values.name.length > 15) {
-    errors.name = "Must be 15 characters or less";
-  }
-
-  if (!values.email) {
-    errors.email = "Required";
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Invalid email address";
-  }
-
-  return errors;
-};
+import * as Yup from "yup";
 
 const SignupForm = () => {
   const formik = useFormik({
@@ -25,7 +9,15 @@ const SignupForm = () => {
       email: "",
       message: "",
     },
-    validate,
+    validationSchema: Yup.object({
+      name: Yup.string()
+        .max(15, "Must be 15 characters or less")
+        .required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
+      message: Yup.string()
+        .max(512, "Must be 512 characters or less")
+        .required("Required"),
+    }),
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },
