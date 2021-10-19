@@ -6,6 +6,13 @@ export default function Home() {
   return (
     <div className="App">
       <Layout>
+        <section className="icon-list">
+          <i className="nes-icon is-medium heart"></i>
+          <i className="nes-icon is-medium heart"></i>
+          <i className="nes-icon is-medium is-half heart"></i>
+          <i className="nes-icon is-medium is-transparent heart"></i>
+        </section>
+
         <div className="nes-container with-title  is-centered  is-dark">
           <p className="title">Bits Please</p>
           <ul>
