@@ -42,6 +42,19 @@ export default function Home() {
               </Link>
             </li>
           </ul>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignContent: "center",
+            }}
+          >
+            <p style={{ paddingTop: 10, paddingRight: 10 }}>
+              insert coin to play
+            </p>
+            <i className="nes-icon coin is-medium"></i>
+          </div>
         </div>
       </Layout>
     </div>
