@@ -26,40 +26,19 @@ const SignupForm = () => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <label htmlFor="name">Name</label>
-      <input
-        id="name"
-        name="name"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.name}
-      />
+      <input id="name" type="text" {...formik.getFieldProps("name")} />
       {formik.touched.name && formik.errors.name ? (
         <div>{formik.errors.name}</div>
       ) : null}
 
       <label htmlFor="email">Email Address</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.email}
-      />
+      <input id="email" type="email" {...formik.getFieldProps("email")} />
       {formik.touched.email && formik.errors.email ? (
         <div>{formik.errors.email}</div>
       ) : null}
 
       <label htmlFor="message">Message</label>
-      <input
-        id="message"
-        name="message"
-        type="text"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.message}
-      />
+      <input id="message" type="text" {...formik.getFieldProps("message")} />
       {formik.touched.message && formik.errors.message ? (
         <div>{formik.errors.message}</div>
       ) : null}
