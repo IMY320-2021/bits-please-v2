@@ -1,6 +1,23 @@
 import React from "react";
-import { Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
+
+import "./SignupForm.css";
+
+// const CustomTextInput = ({ label, ...props }) => {
+//   const [field, meta] = useField(props);
+//   return (
+//     <>
+//       <label htmlFor={props.id || props.name}>{label}</label>
+//       <input className="text-input" {...field} {...props} />
+//       {meta.touched && meta.error ? (
+//         <div className="error">{meta.error}</div>
+//       ) : null}
+//     </>
+//   );
+// };
+
+// const CustomTextAreaInput = ({label})
 
 const SignupForm = () => {
   return (
@@ -19,37 +36,35 @@ const SignupForm = () => {
           .max(512, "Must be 512 characters or less")
           .required("Required"),
       })}
-      onSubmit={(values) => {
-        alert(JSON.stringify(values, null, 2));
+      onSubmit={(values, { setSubmitting }) => {
+        setTimeout(() => {
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+        }, 400);
       }}
     >
-      {(formik) => (
-        <form onSubmit={formik.handleSubmit}>
-          <label htmlFor="name">Name</label>
-          <input id="name" type="text" {...formik.getFieldProps("name")} />
-          {formik.touched.name && formik.errors.name ? (
-            <div>{formik.errors.name}</div>
-          ) : null}
+      <Form>
+        <label htmlFor="name" className="form-label">
+          Name
+        </label>
+        <Field name="name" type="text" className="form-input" />
+        <ErrorMessage name="name" />
 
-          <label htmlFor="email">Email Address</label>
-          <input id="email" type="email" {...formik.getFieldProps("email")} />
-          {formik.touched.email && formik.errors.email ? (
-            <div>{formik.errors.email}</div>
-          ) : null}
+        <label htmlFor="email" className="form-label">
+          Email Address
+        </label>
+        <Field name="email" type="email" className="form-input" />
+        <ErrorMessage name="email" />
 
-          <label htmlFor="message">Message</label>
-          <input
-            id="message"
-            type="text"
-            {...formik.getFieldProps("message")}
-          />
-          {formik.touched.message && formik.errors.message ? (
-            <div>{formik.errors.message}</div>
-          ) : null}
+        <label htmlFor="message" className="form-label">
+          Message
+        </label>
+        <Field name="message" as="textarea" className="form-input" />
+        <ErrorMessage name="message" />
 
-          <button type="submit">Submit</button>
-        </form>
-      )}
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </Form>
     </Formik>
   );
 };
