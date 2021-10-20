@@ -23,7 +23,7 @@ class TeamCard extends React.Component {
                 <div style={{ display: "flex" }}>
                   <img
                     src={JdProfilePic}
-                    alt="Jd Perumal"
+                    alt={data.name}
                     style={{ width: "20%", height: "20%", borderRadius: "50%" }}
                   />
                   <div
@@ -48,45 +48,72 @@ class TeamCard extends React.Component {
                 </div>
                 <div
                   style={{
-                    width: "60%",
-                    marginLeft: "20%",
-                    marginTop: "-6%",
+                    display: "flex",
                   }}
                 >
                   <div
                     style={{
-                      display: "flex",
+                      width: "35%",
+                      marginLeft: "25%",
+                      marginTop: "-6%",
                     }}
                   >
                     <p
                       style={{
                         paddingTop: 15,
-                        width: "30%",
+                        width: "40%",
                       }}
                     >
-                      {" "}
-                      Java{" "}
+                      {data.skills[0]}
                     </p>
                     <progress
                       className="nes-progress is-success"
                       value="80"
                       max="100"
                     ></progress>
-                  </div>
 
+                    <p
+                      style={{
+                        paddingTop: 15,
+                        width: "40%",
+                      }}
+                    >
+                      {data.skills[2]}
+                    </p>
+                    <progress
+                      className="nes-progress is-warning"
+                      value="60"
+                      max="100"
+                    ></progress>
+                  </div>
                   <div
                     style={{
-                      display: "flex",
+                      width: "35%",
+                      marginLeft: "5%",
+                      marginTop: "-6%",
                     }}
                   >
                     <p
                       style={{
                         paddingTop: 15,
-                        width: "30%",
+                        width: "40%",
                       }}
                     >
-                      {" "}
-                      JavaScript{" "}
+                      {data.skills[0]}
+                    </p>
+                    <progress
+                      className="nes-progress is-success"
+                      value="80"
+                      max="100"
+                    ></progress>
+
+                    <p
+                      style={{
+                        paddingTop: 15,
+                        width: "40%",
+                      }}
+                    >
+                      {data.skills[2]}
                     </p>
                     <progress
                       className="nes-progress is-warning"

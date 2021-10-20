@@ -6,14 +6,7 @@ const TeamData = [
   {
     name: "Christoff Linde",
     bio: "Hard-working full-stack developer. My curiosity and dedication drive me to expand my skill set by exploring new technologies and concepts. By combining my strength in solving problems and my love for being creative, I create one-of-a-kind software experiences.",
-    skills: [
-      "HTML & CSS",
-      "JavaScript",
-      "C++",
-      "Git",
-      "Unreal Engine",
-      "DevOps",
-    ],
+    skills: ["HTML", "CSS", "JavaScript", "C++"],
     social: {
       linkedin: "https://www.linkedin.com/in/christoff-linde/",
       github: "https://github.com/christoff-linde",
