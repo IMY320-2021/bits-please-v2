@@ -66,7 +66,7 @@ export default function OurTeam() {
             <img
               src={character1}
               alt="character1"
-              style={{ width: 500, height: 200 }}
+              style={{ width: "20%", height: "20%" }}
             />
             <div
               className="nes-balloon from-left is-dark"
@@ -106,7 +106,7 @@ export default function OurTeam() {
               <p
                 style={{
                   paddingTop: 15,
-                  width: 250,
+                  width: "25%",
                 }}
               >
                 {" "}
@@ -127,7 +127,7 @@ export default function OurTeam() {
               <p
                 style={{
                   paddingTop: 15,
-                  width: 250,
+                  width: "25%",
                 }}
               >
                 {" "}
