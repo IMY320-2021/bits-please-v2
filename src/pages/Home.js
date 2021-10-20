@@ -11,9 +11,7 @@ export default function Home() {
           <i className="nes-icon is-medium is-half heart"></i>
           <i className="nes-icon is-medium is-transparent heart"></i>
         </section>
-        <p className="title" style={{ fontSize: 40, marginTop: 0 }}>
-          Bits Please
-        </p>
+        <p style={{ fontSize: 40, marginTop: 0 }}>Bits Please</p>
 
         <ul style={{ paddingTop: 10, paddingRight: 10 }}>
           <li>
