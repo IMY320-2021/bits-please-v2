@@ -66,7 +66,7 @@ export default function OurTeam() {
             <img
               src={character1}
               alt="character1"
-              style={{ width: "20%", height: "20%" }}
+              style={{ width: "20%", height: "20%", borderRadius: "50%" }}
             />
             <div
               className="nes-balloon from-left is-dark"
