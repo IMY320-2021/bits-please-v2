@@ -19,18 +19,26 @@ export default function Home() {
 
           <ul style={{ paddingTop: 10, paddingRight: 10 }}>
             <li>
-              <Link className="nes-btn" to="/Projects" style={{ width: "20%" }}>
+              <Link
+                className="nes-btn is-primary"
+                to="/Projects"
+                style={{ width: "20%" }}
+              >
                 Projects
               </Link>
             </li>
             <li>
-              <Link className="nes-btn" to="/Shop" style={{ width: "20%" }}>
+              <Link
+                className="nes-btn is-error"
+                to="/Shop"
+                style={{ width: "20%" }}
+              >
                 Shop
               </Link>
             </li>
             <li>
               <Link
-                className="nes-btn is-primary"
+                className="nes-btn is-success"
                 to="/AboutUs"
                 style={{ width: "20%" }}
               >
@@ -39,7 +47,7 @@ export default function Home() {
             </li>
             <li>
               <Link
-                className="nes-btn  is-success"
+                className="nes-btn  is-warning"
                 to="/OurTeam"
                 style={{ width: "20%" }}
               >
@@ -48,7 +56,7 @@ export default function Home() {
             </li>
             <li>
               <Link
-                className="nes-btn is-error"
+                className="nes-btn"
                 to="/ContactUs"
                 style={{ width: "20%" }}
               >
