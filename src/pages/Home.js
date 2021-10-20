@@ -6,16 +6,18 @@ export default function Home() {
   return (
     <div className="App">
       <Layout>
-        <section className="icon-list">
-          <i className="nes-icon is-medium heart"></i>
-          <i className="nes-icon is-medium heart"></i>
-          <i className="nes-icon is-medium is-half heart"></i>
-          <i className="nes-icon is-medium is-transparent heart"></i>
-        </section>
-
         <div className="nes-container with-title  is-centered  is-dark">
-          <p className="title">Bits Please</p>
-          <ul>
+          <section className="icon-list" style={{ "text-align": "left" }}>
+            <i className="nes-icon is-medium heart"></i>
+            <i className="nes-icon is-medium heart"></i>
+            <i className="nes-icon is-medium is-half heart"></i>
+            <i className="nes-icon is-medium is-transparent heart"></i>
+          </section>
+          <p className="title" style={{ fontSize: 40, marginTop: 0 }}>
+            Bits Please
+          </p>
+
+          <ul style={{ paddingTop: 10, paddingRight: 10 }}>
             <li>
               <Link className="nes-btn" to="/Projects">
                 Projects
