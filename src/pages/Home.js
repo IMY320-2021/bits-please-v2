@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Layout from "../components/Layout/Layout";
 
 export default function Home() {
   return (
     <div className="App">
-      <Layout>
+      <div style={{ width: "100%" }}>
         <div className="nes-container with-title  is-centered  is-dark">
           <section className="icon-list" style={{ "text-align": "left" }}>
             <i className="nes-icon is-medium heart"></i>
@@ -78,7 +77,7 @@ export default function Home() {
             <i className="nes-icon coin is-medium"></i>
           </div>
         </div>
-      </Layout>
+      </div>
     </div>
   );
 }
