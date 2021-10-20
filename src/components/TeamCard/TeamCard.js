@@ -18,81 +18,166 @@ class TeamCard extends React.Component {
           >
             <p className="title">{data.name}</p>
 
-            <div style={{ display: "flex" }}>
-              <img
-                src={JdProfilePic}
-                alt="Jd Perumal"
-                style={{ width: "20%", height: "20%", borderRadius: "50%" }}
-              />
-              <div
-                className="nes-balloon from-left is-dark"
-                style={{ marginLeft: 30, marginBottom: 90 }}
-              >
-                <p>{data.bio}</p>
-              </div>
-            </div>
+            {data.leftPosition && (
+              <div>
+                <div style={{ display: "flex" }}>
+                  <img
+                    src={JdProfilePic}
+                    alt="Jd Perumal"
+                    style={{ width: "20%", height: "20%", borderRadius: "50%" }}
+                  />
+                  <div
+                    className="nes-balloon from-left is-dark"
+                    style={{ marginLeft: 30, marginBottom: 90 }}
+                  >
+                    <p>{data.bio}</p>
+                  </div>
+                </div>
 
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                width: "20%",
-                paddingTop: 10,
-              }}
-            >
-              <i className="nes-icon gmail is-medium"></i>
-              <i className="nes-icon linkedin is-medium"></i>
-              <i className="nes-icon github is-medium"></i>
-            </div>
-            <div
-              style={{
-                width: "60%",
-                marginLeft: "22%",
-                marginTop: "-6%",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                }}
-              >
-                <p
+                <div
                   style={{
-                    paddingTop: 15,
-                    width: "30%",
+                    display: "flex",
+                    justifyContent: "space-evenly",
+                    width: "20%",
+                    paddingTop: 10,
                   }}
                 >
-                  {" "}
-                  Java{" "}
-                </p>
-                <progress
-                  className="nes-progress is-success"
-                  value="80"
-                  max="100"
-                ></progress>
-              </div>
-
-              <div
-                style={{
-                  display: "flex",
-                }}
-              >
-                <p
+                  <i className="nes-icon gmail is-medium"></i>
+                  <i className="nes-icon linkedin is-medium"></i>
+                  <i className="nes-icon github is-medium"></i>
+                </div>
+                <div
                   style={{
-                    paddingTop: 15,
-                    width: "30%",
+                    width: "60%",
+                    marginLeft: "20%",
+                    marginTop: "-6%",
                   }}
                 >
-                  {" "}
-                  JavaScript{" "}
-                </p>
-                <progress
-                  className="nes-progress is-warning"
-                  value="60"
-                  max="100"
-                ></progress>
+                  <div
+                    style={{
+                      display: "flex",
+                    }}
+                  >
+                    <p
+                      style={{
+                        paddingTop: 15,
+                        width: "30%",
+                      }}
+                    >
+                      {" "}
+                      Java{" "}
+                    </p>
+                    <progress
+                      className="nes-progress is-success"
+                      value="80"
+                      max="100"
+                    ></progress>
+                  </div>
+
+                  <div
+                    style={{
+                      display: "flex",
+                    }}
+                  >
+                    <p
+                      style={{
+                        paddingTop: 15,
+                        width: "30%",
+                      }}
+                    >
+                      {" "}
+                      JavaScript{" "}
+                    </p>
+                    <progress
+                      className="nes-progress is-warning"
+                      value="60"
+                      max="100"
+                    ></progress>
+                  </div>
+                </div>
               </div>
-            </div>
+            )}
+
+            {!data.leftPosition && (
+              <div>
+                <div style={{ display: "flex" }}>
+                  <div
+                    className="nes-balloon from-right is-dark"
+                    style={{ marginLeft: 30, marginBottom: 90 }}
+                  >
+                    <p>{data.bio}</p>
+                  </div>
+                  <img
+                    src={JdProfilePic}
+                    alt="Jd Perumal"
+                    style={{ width: "20%", height: "20%", borderRadius: "50%" }}
+                  />
+                </div>
+
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-evenly",
+                    width: "20%",
+                    paddingTop: 10,
+                    marginLeft: "80%",
+                  }}
+                >
+                  <i className="nes-icon gmail is-medium"></i>
+                  <i className="nes-icon linkedin is-medium"></i>
+                  <i className="nes-icon github is-medium"></i>
+                </div>
+                <div
+                  style={{
+                    width: "60%",
+                    marginLeft: "20%",
+                    marginTop: "-6%",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                    }}
+                  >
+                    <p
+                      style={{
+                        paddingTop: 15,
+                        width: "30%",
+                      }}
+                    >
+                      {" "}
+                      Java{" "}
+                    </p>
+                    <progress
+                      className="nes-progress is-success"
+                      value="80"
+                      max="100"
+                    ></progress>
+                  </div>
+
+                  <div
+                    style={{
+                      display: "flex",
+                    }}
+                  >
+                    <p
+                      style={{
+                        paddingTop: 15,
+                        width: "30%",
+                      }}
+                    >
+                      {" "}
+                      JavaScript{" "}
+                    </p>
+                    <progress
+                      className="nes-progress is-warning"
+                      value="60"
+                      max="100"
+                    ></progress>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </React.Fragment>
@@ -105,6 +190,7 @@ TeamCard.propTypes = {
     name: PropTypes.string,
     bio: PropTypes.string,
     skills: PropTypes.arrayOf(PropTypes.string),
+    leftPosition: PropTypes.bool,
     social: PropTypes.shape({
       linkedin: PropTypes.string,
       github: PropTypes.string,

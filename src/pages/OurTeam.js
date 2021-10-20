@@ -19,6 +19,7 @@ const TeamData = [
       github: "https://github.com/christoff-linde",
       email: "christoff.linde@gmail.com",
     },
+    leftPosition: true,
   },
   {
     name: "Chanel Mulder",
@@ -29,6 +30,7 @@ const TeamData = [
       github: "https://github.com/ChanelMulder",
       email: "https://github.com/ChanelMulder",
     },
+    leftPosition: false,
   },
   {
     name: "Jd Perumal",
@@ -39,6 +41,7 @@ const TeamData = [
       github: "https://github.com/JdPerumal",
       email: "https://www.jdperumal.tech/",
     },
+    leftPosition: true,
   },
   {
     name: "Gerard Nagura",
@@ -49,6 +52,7 @@ const TeamData = [
       github: "https://github.com/MaverickGDN0403",
       email: "https://imy320-2021.github.io/Bits-Please/OurTeam#",
     },
+    leftPosition: false,
   },
 ];
 
