@@ -74,16 +74,36 @@ export default function OurTeam() {
               </p>
             </div>
           </div>
+
           <div
             style={{
               display: "flex",
               justifyContent: "space-evenly",
               width: 200,
+              paddingTop: 10,
             }}
           >
             <i className="nes-icon gmail is-medium"></i>
             <i className="nes-icon linkedin is-medium"></i>
             <i className="nes-icon github is-medium"></i>
+          </div>
+          <div
+            style={{
+              width: 400,
+              marginLeft: 400,
+              marginTop: -100,
+            }}
+          >
+            <progress
+              className="nes-progress is-primary"
+              value="80"
+              max="100"
+            ></progress>
+            <progress
+              className="nes-progress is-success"
+              value="50"
+              max="100"
+            ></progress>
           </div>
         </div>
       </div>
