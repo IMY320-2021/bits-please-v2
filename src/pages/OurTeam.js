@@ -106,7 +106,7 @@ export default function OurTeam() {
               <p
                 style={{
                   paddingTop: 15,
-                  width: "25%",
+                  width: "30%",
                 }}
               >
                 {" "}
@@ -127,7 +127,7 @@ export default function OurTeam() {
               <p
                 style={{
                   paddingTop: 15,
-                  width: "25%",
+                  width: "30%",
                 }}
               >
                 {" "}
