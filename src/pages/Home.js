@@ -19,27 +19,39 @@ export default function Home() {
 
           <ul style={{ paddingTop: 10, paddingRight: 10 }}>
             <li>
-              <Link className="nes-btn" to="/Projects">
+              <Link className="nes-btn" to="/Projects" style={{ width: "20%" }}>
                 Projects
               </Link>
             </li>
             <li>
-              <Link className="nes-btn" to="/Shop">
+              <Link className="nes-btn" to="/Shop" style={{ width: "20%" }}>
                 Shop
               </Link>
             </li>
             <li>
-              <Link className="nes-btn is-primary" to="/AboutUs">
+              <Link
+                className="nes-btn is-primary"
+                to="/AboutUs"
+                style={{ width: "20%" }}
+              >
                 About Us
               </Link>
             </li>
             <li>
-              <Link className="nes-btn  is-success" to="/OurTeam">
+              <Link
+                className="nes-btn  is-success"
+                to="/OurTeam"
+                style={{ width: "20%" }}
+              >
                 Our Team
               </Link>
             </li>
             <li>
-              <Link className="nes-btn is-error" to="/ContactUs">
+              <Link
+                className="nes-btn is-error"
+                to="/ContactUs"
+                style={{ width: "20%" }}
+              >
                 Contact Us
               </Link>
             </li>
