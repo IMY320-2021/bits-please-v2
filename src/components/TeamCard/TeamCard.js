@@ -58,7 +58,7 @@ class TeamCard extends React.Component {
                       marginTop: "-6%",
                     }}
                   >
-                    {data.skillsPrimary.map((skill) => (
+                    {data.skills.skillsPrimary.map((skill) => (
                       <div key={skill} className="skill">
                         <p
                           style={{
@@ -83,7 +83,7 @@ class TeamCard extends React.Component {
                       marginTop: "-6%",
                     }}
                   >
-                    {data.skillsSecondary.map((skill) => (
+                    {data.skills.skillsSecondary.map((skill) => (
                       <div key={skill} className="skill">
                         <p
                           style={{
@@ -146,7 +146,7 @@ class TeamCard extends React.Component {
                       marginTop: "-6%",
                     }}
                   >
-                    {data.skillsPrimary.map((skill) => (
+                    {data.skills.skillsPrimary.map((skill) => (
                       <div key={skill} className="skill">
                         <p
                           style={{
@@ -171,7 +171,7 @@ class TeamCard extends React.Component {
                       marginTop: "-6%",
                     }}
                   >
-                    {data.skillsSecondary.map((skill) => (
+                    {data.skills.skillsSecondary.map((skill) => (
                       <div key={skill} className="skill">
                         <p
                           style={{
@@ -203,8 +203,12 @@ TeamCard.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string,
     bio: PropTypes.string,
-    skillsPrimary: PropTypes.arrayOf(PropTypes.string),
-    skillsSecondary: PropTypes.arrayOf(PropTypes.string),
+    skills: PropTypes.shape({
+      skillsPrimary: PropTypes.arrayOf(PropTypes.string),
+      skillsSecondary: PropTypes.arrayOf(PropTypes.string),
+      skillsPrimaryValues: PropTypes.arrayOf(PropTypes.number),
+      skillsSecondaryValues: PropTypes.arrayOf(PropTypes.number),
+    }),
     leftPosition: PropTypes.bool,
     social: PropTypes.shape({
       linkedin: PropTypes.string,

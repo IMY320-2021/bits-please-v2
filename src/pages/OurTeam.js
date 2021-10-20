@@ -6,8 +6,12 @@ const TeamData = [
   {
     name: "Christoff Linde",
     bio: "Hard-working full-stack developer. My curiosity and dedication drive me to expand my skill set by exploring new technologies and concepts. By combining my strength in solving problems and my love for being creative, I create one-of-a-kind software experiences.",
-    skillsPrimary: ["HTML", "CSS"],
-    skillsSecondary: ["JavaScript", "C++"],
+    skills: {
+      skillsPrimary: ["Java", "JavaScript"],
+      skillsSecondary: ["React Native", "C++"],
+      skillsPrimaryValues: [90, 80],
+      skillsSecondaryValues: [70, 60],
+    },
     social: {
       linkedin: "https://www.linkedin.com/in/christoff-linde/",
       github: "https://github.com/christoff-linde",
@@ -18,8 +22,12 @@ const TeamData = [
   {
     name: "Chanel Mulder",
     bio: "I enjoy UI/UX design, game design/development, programming, web design/development and design. I am a cheerleader and have represented South Africa at the cheerleading worlds championship in America in 2017.",
-    skillsPrimary: ["Web Design", "Java"],
-    skillsSecondary: ["HTML", "English"],
+    skills: {
+      skillsPrimary: ["Java", "JavaScript"],
+      skillsSecondary: ["React Native", "C++"],
+      skillsPrimaryValues: [90, 80],
+      skillsSecondaryValues: [70, 60],
+    },
 
     social: {
       linkedin: "https://www.linkedin.com/in/chanel-mulder-7273a31bb/",
@@ -31,8 +39,12 @@ const TeamData = [
   {
     name: "Jd Perumal",
     bio: `I have a passion for software development. I have always had a creative side but never a medium of expression. Software development, more specifically frontend development is the outlet that I've found which allows me to express and showcase my creativity and passion. Some of my interests and hobbies include powerlifting, fitness and nutrition.`,
-    skillsPrimary: ["Java", "JavaScript"],
-    skillsSecondary: ["React Native", "C++"],
+    skills: {
+      skillsPrimary: ["Java", "JavaScript"],
+      skillsSecondary: ["React Native", "C++"],
+      skillsPrimaryValues: [90, 80],
+      skillsSecondaryValues: [70, 60],
+    },
 
     social: {
       linkedin: "https://www.linkedin.com/in/jd-perumal/",
@@ -44,8 +56,13 @@ const TeamData = [
   {
     name: "Gerard Nagura",
     bio: "I am hard-working and energetic with a never-ending need to know more. I enjoy software development and have a passion for expressing my creativity through it. My ability to work well with others helps to contribute to a positive working-environment.",
-    skillsPrimary: ["Java", "HTML"],
-    skillsSecondary: ["C++", "Afrikaans"],
+    skills: {
+      skillsPrimary: ["Java", "JavaScript"],
+      skillsSecondary: ["React Native", "C++"],
+      skillsPrimaryValues: [90, 80],
+      skillsSecondaryValues: [70, 60],
+    },
+
     social: {
       linkedin: "https://www.linkedin.com/in/gerard-nagura-5308a217a/",
       github: "https://github.com/MaverickGDN0403",
