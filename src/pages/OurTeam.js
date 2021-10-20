@@ -62,13 +62,28 @@ export default function OurTeam() {
           <p className="title">Jd Perumal</p>
 
           <div style={{ display: "flex" }}>
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Logo" style={{ width: 500, height: 200 }} />
             <div
               className="nes-balloon from-left is-dark"
               style={{ marginLeft: 30, marginBottom: 90 }}
             >
-              <p>Good morning. Thou hast had a good nights sleep, I hope.</p>
+              <p>
+                {" "}
+                Software development is the outlet that I&apos;ve found which
+                allows me to express and showcase my creativity and passion.{" "}
+              </p>
             </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              width: 200,
+            }}
+          >
+            <i className="nes-icon gmail is-medium"></i>
+            <i className="nes-icon linkedin is-medium"></i>
+            <i className="nes-icon github is-medium"></i>
           </div>
         </div>
       </div>
