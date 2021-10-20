@@ -83,7 +83,7 @@ export default function OurTeam() {
             style={{
               display: "flex",
               justifyContent: "space-evenly",
-              width: 200,
+              width: "20%",
               paddingTop: 10,
             }}
           >
@@ -93,9 +93,9 @@ export default function OurTeam() {
           </div>
           <div
             style={{
-              width: 600,
-              marginLeft: 250,
-              marginTop: -100,
+              width: "60%",
+              marginLeft: "22%",
+              marginTop: "-6%",
             }}
           >
             <div
