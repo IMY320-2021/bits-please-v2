@@ -39,7 +39,7 @@ class TeamCard extends React.Component {
                     display: "flex",
                     justifyContent: "space-evenly",
                     width: "20%",
-                    paddingTop: 10,
+                    paddingTop: 20,
                   }}
                 >
                   <i className="nes-icon gmail is-medium"></i>
@@ -58,33 +58,23 @@ class TeamCard extends React.Component {
                       marginTop: "-6%",
                     }}
                   >
-                    <p
-                      style={{
-                        paddingTop: 15,
-                        width: "40%",
-                      }}
-                    >
-                      {data.skills[0]}
-                    </p>
-                    <progress
-                      className="nes-progress is-success"
-                      value="80"
-                      max="100"
-                    ></progress>
-
-                    <p
-                      style={{
-                        paddingTop: 15,
-                        width: "40%",
-                      }}
-                    >
-                      {data.skills[2]}
-                    </p>
-                    <progress
-                      className="nes-progress is-warning"
-                      value="60"
-                      max="100"
-                    ></progress>
+                    {data.skillsPrimary.map((skill) => (
+                      <div key={skill} className="skill">
+                        <p
+                          style={{
+                            paddingTop: 15,
+                            width: "40%",
+                          }}
+                        >
+                          {skill}
+                        </p>
+                        <progress
+                          className="nes-progress is-success"
+                          value="80"
+                          max="100"
+                        ></progress>
+                      </div>
+                    ))}
                   </div>
                   <div
                     style={{
@@ -93,33 +83,23 @@ class TeamCard extends React.Component {
                       marginTop: "-6%",
                     }}
                   >
-                    <p
-                      style={{
-                        paddingTop: 15,
-                        width: "40%",
-                      }}
-                    >
-                      {data.skills[0]}
-                    </p>
-                    <progress
-                      className="nes-progress is-success"
-                      value="80"
-                      max="100"
-                    ></progress>
-
-                    <p
-                      style={{
-                        paddingTop: 15,
-                        width: "40%",
-                      }}
-                    >
-                      {data.skills[2]}
-                    </p>
-                    <progress
-                      className="nes-progress is-warning"
-                      value="60"
-                      max="100"
-                    ></progress>
+                    {data.skillsSecondary.map((skill) => (
+                      <div key={skill} className="skill">
+                        <p
+                          style={{
+                            paddingTop: 15,
+                            width: "40%",
+                          }}
+                        >
+                          {skill}
+                        </p>
+                        <progress
+                          className="nes-progress is-success"
+                          value="80"
+                          max="100"
+                        ></progress>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -156,51 +136,58 @@ class TeamCard extends React.Component {
                 </div>
                 <div
                   style={{
-                    width: "60%",
-                    marginLeft: "20%",
-                    marginTop: "-6%",
+                    display: "flex",
                   }}
                 >
                   <div
                     style={{
-                      display: "flex",
+                      width: "35%",
+                      marginLeft: "0%",
+                      marginTop: "-6%",
                     }}
                   >
-                    <p
-                      style={{
-                        paddingTop: 15,
-                        width: "30%",
-                      }}
-                    >
-                      {" "}
-                      Java{" "}
-                    </p>
-                    <progress
-                      className="nes-progress is-success"
-                      value="80"
-                      max="100"
-                    ></progress>
+                    {data.skillsPrimary.map((skill) => (
+                      <div key={skill} className="skill">
+                        <p
+                          style={{
+                            paddingTop: 15,
+                            width: "40%",
+                          }}
+                        >
+                          {skill}
+                        </p>
+                        <progress
+                          className="nes-progress is-success"
+                          value="80"
+                          max="100"
+                        ></progress>
+                      </div>
+                    ))}
                   </div>
-
                   <div
                     style={{
-                      display: "flex",
+                      width: "35%",
+                      marginLeft: "5%",
+                      marginTop: "-6%",
                     }}
                   >
-                    <p
-                      style={{
-                        paddingTop: 15,
-                        width: "30%",
-                      }}
-                    >
-                      {" "}
-                      JavaScript{" "}
-                    </p>
-                    <progress
-                      className="nes-progress is-warning"
-                      value="60"
-                      max="100"
-                    ></progress>
+                    {data.skillsSecondary.map((skill) => (
+                      <div key={skill} className="skill">
+                        <p
+                          style={{
+                            paddingTop: 15,
+                            width: "40%",
+                          }}
+                        >
+                          {skill}
+                        </p>
+                        <progress
+                          className="nes-progress is-success"
+                          value="80"
+                          max="100"
+                        ></progress>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -216,7 +203,8 @@ TeamCard.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string,
     bio: PropTypes.string,
-    skills: PropTypes.arrayOf(PropTypes.string),
+    skillsPrimary: PropTypes.arrayOf(PropTypes.string),
+    skillsSecondary: PropTypes.arrayOf(PropTypes.string),
     leftPosition: PropTypes.bool,
     social: PropTypes.shape({
       linkedin: PropTypes.string,
