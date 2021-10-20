@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import TeamCard from "../components/TeamCard/TeamCard";
-
+import logo from "../assets/images/seamless_paper_texture/seamless_paper_texture.png"; // Tell webpack this JS file uses this image
 const TeamData = [
   {
     name: "Christoff Linde",
@@ -20,48 +20,58 @@ const TeamData = [
       email: "christoff.linde@gmail.com",
     },
   },
-  {
-    name: "Chanel Mulder",
-    bio: "I enjoy UI/UX design, game design/development, programming, web design/development and design. I am a cheerleader and have represented South Africa at the cheerleading worlds championship in America in 2017.",
-    skills: ["Web Design", "Java", "HTML"],
-    social: {
-      linkedin: "https://www.linkedin.com/in/chanel-mulder-7273a31bb/",
-      github: "https://github.com/ChanelMulder",
-      email: "https://github.com/ChanelMulder",
-    },
-  },
-  {
-    name: "Jd Perumal",
-    bio: `I have a passion for software development. I have always had a creative side but never a medium of expression. Software development, more specifically frontend development is the outlet that I've found which allows me to express and showcase my creativity and passion. Some of my interests and hobbies include powerlifting, fitness and nutrition.`,
-    skills: ["Java", "C++", "JavaScript & React Native"],
-    social: {
-      linkedin: "https://www.linkedin.com/in/jd-perumal/",
-      github: "https://github.com/JdPerumal",
-      email: "https://www.jdperumal.tech/",
-    },
-  },
-  {
-    name: "Gerard Nagura",
-    bio: "I am hard-working and energetic with a never-ending need to know more. I enjoy software development and have a passion for expressing my creativity through it. My ability to work well with others helps to contribute to a positive working-environment.",
-    skills: ["Java", "HTML", "C++"],
-    social: {
-      linkedin: "https://www.linkedin.com/in/gerard-nagura-5308a217a/",
-      github: "https://github.com/MaverickGDN0403",
-      email: "https://imy320-2021.github.io/Bits-Please/OurTeam#",
-    },
-  },
+  // {
+  //   name: "Chanel Mulder",
+  //   bio: "I enjoy UI/UX design, game design/development, programming, web design/development and design. I am a cheerleader and have represented South Africa at the cheerleading worlds championship in America in 2017.",
+  //   skills: ["Web Design", "Java", "HTML"],
+  //   social: {
+  //     linkedin: "https://www.linkedin.com/in/chanel-mulder-7273a31bb/",
+  //     github: "https://github.com/ChanelMulder",
+  //     email: "https://github.com/ChanelMulder",
+  //   },
+  // },
+  // {
+  //   name: "Jd Perumal",
+  //   bio: `I have a passion for software development. I have always had a creative side but never a medium of expression. Software development, more specifically frontend development is the outlet that I've found which allows me to express and showcase my creativity and passion. Some of my interests and hobbies include powerlifting, fitness and nutrition.`,
+  //   skills: ["Java", "C++", "JavaScript & React Native"],
+  //   social: {
+  //     linkedin: "https://www.linkedin.com/in/jd-perumal/",
+  //     github: "https://github.com/JdPerumal",
+  //     email: "https://www.jdperumal.tech/",
+  //   },
+  // },
+  // {
+  //   name: "Gerard Nagura",
+  //   bio: "I am hard-working and energetic with a never-ending need to know more. I enjoy software development and have a passion for expressing my creativity through it. My ability to work well with others helps to contribute to a positive working-environment.",
+  //   skills: ["Java", "HTML", "C++"],
+  //   social: {
+  //     linkedin: "https://www.linkedin.com/in/gerard-nagura-5308a217a/",
+  //     github: "https://github.com/MaverickGDN0403",
+  //     email: "https://imy320-2021.github.io/Bits-Please/OurTeam#",
+  //   },
+  // },
 ];
 
 export default function OurTeam() {
   console.log(TeamData);
   return (
     <div className="App">
-      <Layout>
-        <h1>Our Team Page</h1>
-        {TeamData.map((member) => {
-          return <TeamCard key={member.name} data={member} />;
-        })}
-      </Layout>
+      <div className="nes-container with-title is-dark">
+        <h1 style={{ "text-align": "center" }}>Our Team</h1>
+        <div className="nes-container is-dark with-title">
+          <p className="title">Jd Perumal</p>
+
+          <div style={{ display: "flex" }}>
+            <img src={logo} alt="Logo" />
+            <div
+              className="nes-balloon from-left is-dark"
+              style={{ marginLeft: 30, marginBottom: 90 }}
+            >
+              <p>Good morning. Thou hast had a good nights sleep, I hope.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
