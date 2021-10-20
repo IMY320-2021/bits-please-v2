@@ -57,8 +57,11 @@ export default function OurTeam() {
   return (
     <div className="App">
       <div className="nes-container with-title is-dark">
-        <h1 style={{ "text-align": "center" }}>Our Team</h1>
-        <div className="nes-container is-dark with-title">
+        <h1 style={{ "text-align": "center", paddingBottom: 10 }}>Our Team</h1>
+        <div
+          className="nes-container is-dark with-title"
+          style={{ paddingTop: 10 }}
+        >
           <p className="title">Jd Perumal</p>
 
           <div style={{ display: "flex" }}>
