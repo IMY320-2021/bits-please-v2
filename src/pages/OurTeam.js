@@ -1,7 +1,5 @@
 import React from "react";
-import Layout from "../components/Layout/Layout";
-import TeamCard from "../components/TeamCard/TeamCard";
-import logo from "../assets/images/seamless_paper_texture/seamless_paper_texture.png"; // Tell webpack this JS file uses this image
+import character1 from "../assets/images/character1.gif"; // Tell webpack this JS file uses this image
 const TeamData = [
   {
     name: "Christoff Linde",
@@ -65,7 +63,11 @@ export default function OurTeam() {
           <p className="title">Jd Perumal</p>
 
           <div style={{ display: "flex" }}>
-            <img src={logo} alt="Logo" style={{ width: 500, height: 200 }} />
+            <img
+              src={character1}
+              alt="character1"
+              style={{ width: 500, height: 200 }}
+            />
             <div
               className="nes-balloon from-left is-dark"
               style={{ marginLeft: 30, marginBottom: 90 }}
