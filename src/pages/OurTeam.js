@@ -1,5 +1,5 @@
 import React from "react";
-import character1 from "../assets/images/character1.gif"; // Tell webpack this JS file uses this image
+import JdChar from "../assets/images/characters/JdChar.gif"; // Tell webpack this JS file uses this image
 const TeamData = [
   {
     name: "Christoff Linde",
@@ -64,7 +64,7 @@ export default function OurTeam() {
 
           <div style={{ display: "flex" }}>
             <img
-              src={character1}
+              src={JdChar}
               alt="character1"
               style={{ width: "20%", height: "20%", borderRadius: "50%" }}
             />
