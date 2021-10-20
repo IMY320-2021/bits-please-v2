@@ -68,9 +68,8 @@ export default function OurTeam() {
               style={{ marginLeft: 30, marginBottom: 90 }}
             >
               <p>
-                {" "}
                 Software development is the outlet that I&apos;ve found which
-                allows me to express and showcase my creativity and passion.{" "}
+                allows me to express and showcase my creativity and passion.
               </p>
             </div>
           </div>
@@ -89,21 +88,52 @@ export default function OurTeam() {
           </div>
           <div
             style={{
-              width: 400,
-              marginLeft: 400,
+              width: 600,
+              marginLeft: 250,
               marginTop: -100,
             }}
           >
-            <progress
-              className="nes-progress is-primary"
-              value="80"
-              max="100"
-            ></progress>
-            <progress
-              className="nes-progress is-success"
-              value="50"
-              max="100"
-            ></progress>
+            <div
+              style={{
+                display: "flex",
+              }}
+            >
+              <p
+                style={{
+                  paddingTop: 15,
+                  width: 250,
+                }}
+              >
+                {" "}
+                Java{" "}
+              </p>
+              <progress
+                className="nes-progress is-success"
+                value="80"
+                max="100"
+              ></progress>
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+              }}
+            >
+              <p
+                style={{
+                  paddingTop: 15,
+                  width: 250,
+                }}
+              >
+                {" "}
+                JavaScript{" "}
+              </p>
+              <progress
+                className="nes-progress is-warning"
+                value="60"
+                max="100"
+              ></progress>
+            </div>
           </div>
         </div>
       </div>
