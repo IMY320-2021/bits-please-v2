@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./TeamCard.css";
-import JdChar from "../../assets/images/characters/JdChar.gif"; // Tell webpack this JS file uses this image
 import JdProfilePic from "../../assets/images/profilepic/JdProfilePic.jpg"; // Tell webpack this JS file uses this image
 class TeamCard extends React.Component {
   render() {
