@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import TeamCard from "../components/TeamCard/TeamCard";
 
@@ -77,12 +78,22 @@ export default function OurTeam() {
   return (
     <div className="App">
       <div className="nes-container with-title is-dark">
-        <h1
-          style={{ "text-align": "center", paddingBottom: 10 }}
-          className="color-yellow"
-        >
-          Our Team
-        </h1>
+        <div style={{ display: "flex" }}>
+          <Link
+            className="nes-btn is-primary"
+            to="/Home"
+            style={{ width: "10%", height: "5%" }}
+          >
+            {"< Back"}
+          </Link>
+          <h1
+            style={{ paddingTop: 10, paddingBottom: 10, paddingLeft: "30%" }}
+            className="color-yellow"
+          >
+            Our Team
+          </h1>
+        </div>
+
         {TeamData.map((member) => {
           return <TeamCard key={member.name} data={member} />;
         })}
