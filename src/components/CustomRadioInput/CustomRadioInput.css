@@ -1,0 +1,12 @@
+.custom-radio-input {
+  background-color: var(--color-off-white);
+  width: 100%;
+  text-align: center;
+  padding: var(--spacing-2);
+  color: var(--color-text-dark);
+}
+
+.custom-radio-input.active {
+  color: var(--text-text);
+  background-color: var(--color-background);
+}
