@@ -8,3 +8,9 @@
   max-width: var(--maxWidth-16xl);
   margin: 0 auto;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
