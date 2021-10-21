@@ -77,7 +77,12 @@ export default function OurTeam() {
   return (
     <div className="App">
       <div className="nes-container with-title is-dark">
-        <h1 style={{ "text-align": "center", paddingBottom: 10 }}>Our Team</h1>
+        <h1
+          style={{ "text-align": "center", paddingBottom: 10 }}
+          className="color-yellow"
+        >
+          Our Team
+        </h1>
         {TeamData.map((member) => {
           return <TeamCard key={member.name} data={member} />;
         })}
