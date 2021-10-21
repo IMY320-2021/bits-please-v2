@@ -33,14 +33,14 @@ jobs:
     - name: Install Node.js
       run: npm install
 
-    - name: Build Project
-      run: npm run build
-
     - name: Code Linting
       run: npm run lint:fix
 
     - name: Code Formatting
       run: npm run format
+
+    - name: Build Project
+      run: npm run build
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.1
