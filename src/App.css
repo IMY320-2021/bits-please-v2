@@ -91,8 +91,68 @@
   --color-background: #131313;
   --color-white: #ffffff;
 
+  /* Updated colour pallete */
+  --color-purple: #6e2594;
+  --color-blue: #209cee;
+  --color-green: #92cc41;
+  --color-yellow: #f7d51d;
+  --color-salmon: #e76e55;
+  --color-red: #df2935;
+  --color-dark-grey: #24292d;
+  --color-off-white: #f5f5f5;
+
   --icon-width: 47px;
   --icon-height: 47px;
+}
+
+.color-purple {
+  color: var(--color-purple);
+}
+.color-blue {
+  color: var(--color-blue);
+}
+.color-green {
+  color: var(--color-green);
+}
+.color-yellow {
+  color: var(--color-yellow);
+}
+.color-salmon {
+  color: var(--color-salmon);
+}
+.color-red {
+  color: var(--color-red);
+}
+.color-dark-grey {
+  color: var(--color-dark-grey);
+}
+.color-off-white {
+  color: var(--color-off-white);
+}
+
+.background-color-purple {
+  background-color: var(--color-purple);
+}
+.background-color-blue {
+  background-color: var(--color-blue);
+}
+.background-color-green {
+  background-color: var(--color-green);
+}
+.background-color-yellow {
+  background-color: var(--color-yellow);
+}
+.background-color-salmon {
+  background-color: var(--color-salmon);
+}
+.background-color-red {
+  background-color: var(--color-red);
+}
+.background-color-dark-grey {
+  background-color: var(--color-dark-grey);
+}
+.background-color-off-white {
+  background-color: var(--color-off-white);
 }
 
 /* HTML elements */
