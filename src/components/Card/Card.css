@@ -1,6 +1,7 @@
 .card {
   background-color: #292929;
   border: 6px solid var(--color-off-white);
+  color: var(--color-text-light);
 }
 
 .card-body {
