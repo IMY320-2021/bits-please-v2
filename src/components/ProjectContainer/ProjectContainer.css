@@ -1,0 +1,10 @@
+.project-container > img {
+  width: 100%;
+}
+
+.project-container {
+  /* border: 4px solid white; */
+  /* padding-top: var(--spacing-6); */
+  max-width: var(--maxWidth-16xl);
+  margin: 0 auto;
+}
