@@ -6,9 +6,15 @@ class CustomRadioInput extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="custom-radio-input">
-          <div>{this.props.data.option}</div>
-        </div>
+        <label className="custom-radio-input">
+          <input
+            type="radio"
+            className="nes-radio"
+            name="answer-dark"
+            checked
+          />
+          <span>{this.props.data.option}</span>
+        </label>
       </React.Fragment>
     );
   }
