@@ -1,22 +1,31 @@
 {
   "files": {
-    "main.css": "/bits-please-v2/static/css/main.3df48522.chunk.css",
-    "main.js": "/bits-please-v2/static/js/main.945202bd.chunk.js",
-    "main.js.map": "/bits-please-v2/static/js/main.945202bd.chunk.js.map",
-    "runtime-main.js": "/bits-please-v2/static/js/runtime-main.3737c355.js",
-    "runtime-main.js.map": "/bits-please-v2/static/js/runtime-main.3737c355.js.map",
-    "static/js/2.9e9b6e34.chunk.js": "/bits-please-v2/static/js/2.9e9b6e34.chunk.js",
-    "static/js/2.9e9b6e34.chunk.js.map": "/bits-please-v2/static/js/2.9e9b6e34.chunk.js.map",
-    "static/js/3.4dd8664e.chunk.js": "/bits-please-v2/static/js/3.4dd8664e.chunk.js",
-    "static/js/3.4dd8664e.chunk.js.map": "/bits-please-v2/static/js/3.4dd8664e.chunk.js.map",
+    "main.css": "/bits-please-v2/static/css/main.50335994.chunk.css",
+    "main.js": "/bits-please-v2/static/js/main.282960d0.chunk.js",
+    "main.js.map": "/bits-please-v2/static/js/main.282960d0.chunk.js.map",
+    "runtime-main.js": "/bits-please-v2/static/js/runtime-main.d0dfe74f.js",
+    "runtime-main.js.map": "/bits-please-v2/static/js/runtime-main.d0dfe74f.js.map",
+    "static/css/2.0f326777.chunk.css": "/bits-please-v2/static/css/2.0f326777.chunk.css",
+    "static/js/2.dbaacc0c.chunk.js": "/bits-please-v2/static/js/2.dbaacc0c.chunk.js",
+    "static/js/2.dbaacc0c.chunk.js.map": "/bits-please-v2/static/js/2.dbaacc0c.chunk.js.map",
+    "static/js/3.c12177ec.chunk.js": "/bits-please-v2/static/js/3.c12177ec.chunk.js",
+    "static/js/3.c12177ec.chunk.js.map": "/bits-please-v2/static/js/3.c12177ec.chunk.js.map",
     "index.html": "/bits-please-v2/index.html",
-    "static/css/main.3df48522.chunk.css.map": "/bits-please-v2/static/css/main.3df48522.chunk.css.map",
-    "static/js/2.9e9b6e34.chunk.js.LICENSE.txt": "/bits-please-v2/static/js/2.9e9b6e34.chunk.js.LICENSE.txt"
+    "static/css/2.0f326777.chunk.css.map": "/bits-please-v2/static/css/2.0f326777.chunk.css.map",
+    "static/css/main.50335994.chunk.css.map": "/bits-please-v2/static/css/main.50335994.chunk.css.map",
+    "static/js/2.dbaacc0c.chunk.js.LICENSE.txt": "/bits-please-v2/static/js/2.dbaacc0c.chunk.js.LICENSE.txt",
+    "static/media/JdProfilePic.56368220.jpg": "/bits-please-v2/static/media/JdProfilePic.56368220.jpg",
+    "static/media/hoodie.4ac00f8c.jpg": "/bits-please-v2/static/media/hoodie.4ac00f8c.jpg",
+    "static/media/App.css": "/bits-please-v2/static/media/vhs-overlay.b9ce4a0d.png",
+    "static/media/long-tshirt.e804ce2f.jpg": "/bits-please-v2/static/media/long-tshirt.e804ce2f.jpg",
+    "static/media/mug.a3c67ce3.jpg": "/bits-please-v2/static/media/mug.a3c67ce3.jpg",
+    "static/media/short-tshirt.cf44fb58.jpg": "/bits-please-v2/static/media/short-tshirt.cf44fb58.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3737c355.js",
-    "static/js/2.9e9b6e34.chunk.js",
-    "static/css/main.3df48522.chunk.css",
-    "static/js/main.945202bd.chunk.js"
+    "static/js/runtime-main.d0dfe74f.js",
+    "static/css/2.0f326777.chunk.css",
+    "static/js/2.dbaacc0c.chunk.js",
+    "static/css/main.50335994.chunk.css",
+    "static/js/main.282960d0.chunk.js"
   ]
 }
