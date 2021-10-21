@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 import "./TeamCard.css";
 import JdProfilePic from "../../assets/images/profilepic/JdProfilePic.jpg"; // Tell webpack this JS file uses this image
+import SocialIcons from "../SocialIcons/SocialIcons";
+
 class TeamCard extends React.Component {
   render() {
     const data = this.props.data;
@@ -32,18 +34,7 @@ class TeamCard extends React.Component {
                 </div>
               </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-evenly",
-                  width: "20%",
-                  paddingTop: 20,
-                }}
-              >
-                <i className="nes-icon gmail is-medium"></i>
-                <i className="nes-icon linkedin is-medium"></i>
-                <i className="nes-icon github is-medium"></i>
-              </div>
+              <SocialIcons marginLeft={"0%"} />
               <div
                 style={{
                   display: "flex",
@@ -108,7 +99,7 @@ class TeamCard extends React.Component {
               className="nes-container is-dark with-title is-right"
               style={{ paddingTop: 10 }}
             >
-              <p className="title">{data.name}</p>{" "}
+              <p className="title">{data.name}</p>
               <div style={{ display: "flex" }}>
                 <div
                   className="nes-balloon from-right is-dark"
@@ -122,19 +113,7 @@ class TeamCard extends React.Component {
                   style={{ width: "20%", height: "20%", borderRadius: "50%" }}
                 />
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-evenly",
-                  width: "20%",
-                  paddingTop: 10,
-                  marginLeft: "80%",
-                }}
-              >
-                <i className="nes-icon gmail is-medium"></i>
-                <i className="nes-icon linkedin is-medium"></i>
-                <i className="nes-icon github is-medium"></i>
-              </div>
+              <SocialIcons marginLeft={"80%"} />
               <div
                 style={{
                   display: "flex",
