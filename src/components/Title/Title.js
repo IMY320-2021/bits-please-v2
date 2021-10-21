@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 class Title extends React.Component {
   render() {
-    const title = this.props.data;
+    const { title, colour } = this.props.data;
 
     return (
       <div style={{ display: "flex" }}>
@@ -21,8 +21,8 @@ class Title extends React.Component {
           {"< Back"}
         </Link>
         <h1
-          style={{ paddingTop: 10, paddingBottom: 10, paddingLeft: "30%" }}
-          className="color-yellow"
+          style={{ paddingTop: 10, paddingBottom: 10, paddingLeft: "25%" }}
+          className={colour}
         >
           {title}
         </h1>

@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <div className="App">
       <Layout>
-        <Title data={"Projects"} />
+        <Title data={{ title: "Projects", colour: "color-blue" }} />
       </Layout>
     </div>
   );

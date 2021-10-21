@@ -78,7 +78,7 @@ export default function OurTeam() {
   return (
     <div className="App">
       <div className="nes-container with-title is-dark">
-        <Title data={"Our team"} />
+        <Title data={{ title: "Our team", colour: "color-yellow" }} />
         {TeamData.map((member) => {
           return <TeamCard key={member.name} data={member} />;
         })}

@@ -6,7 +6,7 @@ export default function AboutUs() {
   return (
     <div className="App">
       <Layout>
-        <Title data={"About us"} />
+        <Title data={{ title: "About Us", colour: "color-green" }} />
       </Layout>
     </div>
   );

@@ -6,7 +6,7 @@ import Title from "../components/Title/Title";
 export default function Shop() {
   return (
     <Layout>
-      <Title data={"Shop"} />
+      <Title data={{ title: "Merch Shop", colour: "color-salmon" }} />
       <CardContainer />
     </Layout>
   );

@@ -8,7 +8,7 @@ export default function ContactUs() {
   return (
     <div className="App">
       <Layout>
-        <Title data={"Contact us"} />
+        <Title data={{ title: "Contact Us", colour: "color-white" }} />
         <SignupForm />
       </Layout>
     </div>
