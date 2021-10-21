@@ -82,7 +82,12 @@ export default function OurTeam() {
           <Link
             className="nes-btn is-primary"
             to="/Home"
-            style={{ width: "10%", height: "5%" }}
+            style={{
+              paddingTop: 10,
+              paddingBottom: 10,
+              width: "10%",
+              height: "5%",
+            }}
           >
             {"< Back"}
           </Link>
