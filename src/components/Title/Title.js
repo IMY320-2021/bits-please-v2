@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class Title extends React.Component {
   render() {
     const { title, colour, location } = this.props.data;
-    const temp = location !== undefined ? location : "/Home";
+    const temp = location !== undefined ? location : "/";
 
     return (
       <div style={{ display: "flex" }}>
