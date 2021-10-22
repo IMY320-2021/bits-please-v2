@@ -7,7 +7,29 @@
   cursor: pointer;
 }
 
-.skills-list {
+.skill-list-container {
   display: grid;
+  gap: 1rem;
   grid-template-columns: 1fr 1fr;
+}
+
+.social-link-container {
+  display: flex;
+  gap: 1em;
+  margin-top: var(--spacing-4);
+  margin-bottom: var(--spacing-2);
+}
+
+.skill > span {
+  margin-top: var(--spacing-4);
+  width: 40%;
+}
+
+.team-image-container {
+  display: flex;
+}
+
+.team-image-container > img {
+  width: 20%;
+  border-radius: 50%;
 }
