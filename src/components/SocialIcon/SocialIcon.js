@@ -13,10 +13,10 @@ const SocialIcon = ({ ...props }) => {
         gap: "1rem",
       }}
     >
-      <a href={`${data.link}`}>
+      <a className="social-icon" href={`${data.link}`}>
         <i className={`nes-icon is-medium ${data.icon}`} />
+        <span>{data.name}</span>
       </a>
-      <span>{data.name}</span>
     </div>
   );
 };
