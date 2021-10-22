@@ -40,6 +40,7 @@ class TeamCard extends React.Component {
                   display: "flex",
                 }}
               >
+                {/*First col of bars*/}
                 <div
                   style={{
                     width: "35%",
@@ -47,7 +48,7 @@ class TeamCard extends React.Component {
                     marginTop: "-6%",
                   }}
                 >
-                  {data.skills.skillsPrimary.map((skill) => (
+                  {data.skillsPrimary.map((skill) => (
                     <div key={skill} className="skill">
                       <p
                         style={{
@@ -55,11 +56,11 @@ class TeamCard extends React.Component {
                           width: "40%",
                         }}
                       >
-                        {skill}
+                        {skill.key}
                       </p>
                       <progress
-                        className="nes-progress is-success"
-                        value="80"
+                        className={skill.colour}
+                        value={skill.value}
                         max="100"
                       ></progress>
                     </div>
@@ -72,7 +73,8 @@ class TeamCard extends React.Component {
                     marginTop: "-6%",
                   }}
                 >
-                  {data.skills.skillsSecondary.map((skill) => (
+                  {/*Second col of bars*/}
+                  {data.skillsSecondary.map((skill) => (
                     <div key={skill} className="skill">
                       <p
                         style={{
@@ -80,11 +82,11 @@ class TeamCard extends React.Component {
                           width: "40%",
                         }}
                       >
-                        {skill}
+                        {skill.key}
                       </p>
                       <progress
-                        className="nes-progress is-success"
-                        value="80"
+                        className={skill.colour}
+                        value={skill.value}
                         max="100"
                       ></progress>
                     </div>
@@ -126,19 +128,18 @@ class TeamCard extends React.Component {
                     marginTop: "-6%",
                   }}
                 >
-                  {data.skills.skillsPrimary.map((skill) => (
+                  {data.skillsPrimary.map((skill) => (
                     <div key={skill} className="skill">
                       <p
                         style={{
                           paddingTop: 15,
-                          width: "40%",
                         }}
                       >
-                        {skill}
+                        {skill.key}
                       </p>
                       <progress
-                        className="nes-progress is-success"
-                        value="80"
+                        className={skill.colour}
+                        value={skill.value}
                         max="100"
                       ></progress>
                     </div>
@@ -151,19 +152,18 @@ class TeamCard extends React.Component {
                     marginTop: "-6%",
                   }}
                 >
-                  {data.skills.skillsSecondary.map((skill) => (
+                  {data.skillsSecondary.map((skill) => (
                     <div key={skill} className="skill">
                       <p
                         style={{
                           paddingTop: 15,
-                          width: "40%",
                         }}
                       >
-                        {skill}
+                        {skill.key}
                       </p>
                       <progress
-                        className="nes-progress is-success"
-                        value="80"
+                        className={skill.colour}
+                        value={skill.value}
                         max="100"
                       ></progress>
                     </div>
@@ -182,12 +182,21 @@ TeamCard.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string,
     bio: PropTypes.string,
-    skills: PropTypes.shape({
-      skillsPrimary: PropTypes.arrayOf(PropTypes.string),
-      skillsSecondary: PropTypes.arrayOf(PropTypes.string),
-      skillsPrimaryValues: PropTypes.arrayOf(PropTypes.number),
-      skillsSecondaryValues: PropTypes.arrayOf(PropTypes.number),
-    }),
+    skillsPrimary: PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.string,
+        value: PropTypes.number,
+        colour: PropTypes.string,
+      })
+    ),
+    skillsSecondary: PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.string,
+        value: PropTypes.number,
+        colour: PropTypes.string,
+      })
+    ),
+
     leftPosition: PropTypes.bool,
     social: PropTypes.shape({
       linkedin: PropTypes.string,
