@@ -84,12 +84,13 @@ const ProjectsData = {
       image_url: `${LostConnection}`,
       tech: [
         {
-          name: "Unreal Engine",
-          description: "Game made using Unreal Engine 5.0 and Blueprints",
+          name: "Adobe Premiere Pro",
+          description: "Video editing and composition",
         },
         {
-          name: "Blender 3D",
-          description: "All 3D modelling, texturing and animations",
+          name: "Adobe Audition",
+          description:
+            "Audio editing, composition, including adding the soundtrack and sound effects",
         },
       ],
     },
@@ -126,7 +127,11 @@ const ProjectsData = {
       id: "gp-01",
       title: "Project 3",
       summary: "Game Project",
-      description: ``,
+      description: `You are a Blob, a species of liquid organisms. Stranded in a desert, you must change the
+                    environment around you to guide you safely back to the ocean. On your path, you will encounter
+                    different biomes and dangers that will wear you down. It is a cruel world; hence you need to keep
+                    your weight in check, otherwise you might not be able to pass the gates.
+                    `,
       image_url: `${GameProject}`,
       tech: [
         {
@@ -136,6 +141,10 @@ const ProjectsData = {
         {
           name: "Blender 3D",
           description: "All 3D modelling, texturing and animations",
+        },
+        {
+          name: "Reaper DAW",
+          description: "Reaper was used for all audio editing and authoring",
         },
       ],
     },
@@ -166,7 +175,7 @@ const ProjectsData = {
       ],
     },
     {
-      id: "gp-02",
+      id: "gp-04",
       title: "Project 5",
       summary: "Game Project",
       description: ``,
