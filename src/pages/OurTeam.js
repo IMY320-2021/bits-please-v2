@@ -5,6 +5,7 @@ import TeamCard from "../components/TeamCard/TeamCard";
 import Title from "../components/Title/Title";
 import JdProfilePic from "../assets/images/profilepic/JdProfilePic.jpg";
 import ChanelProfilePic from "../assets/images/profilepic/ChanelProfilePic.jpg";
+import GerardProfilePic from "../assets/images/profilepic/GerardProfilePic.jpg";
 
 const TeamData = [
   {
@@ -70,7 +71,7 @@ const TeamData = [
     ],
     skillsSecondary: [
       { key: "HTML", value: 70, colour: "nes-progress is-warning" },
-      { key: "Afrikaans", value: 60, colour: "nes-progress is-error" },
+      { key: "MySQL &  jQuery", value: 60, colour: "nes-progress is-error" },
     ],
     social: [
       {
@@ -118,7 +119,7 @@ const TeamData = [
       },
     ],
     leftPosition: false,
-    image: [`${JdProfilePic}`],
+    image: [`${GerardProfilePic}`],
   },
 ];
 
