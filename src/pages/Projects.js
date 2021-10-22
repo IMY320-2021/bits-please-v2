@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Layout from "../components/Layout/Layout";
+import Title from "../components/Title/Title";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import GameProject from "../assets/images/project-images/game-project-1.png";
 import ProjectPreviewCard from "../components/ProjectPreviewCard/ProjectPreviewCard";
@@ -11,7 +12,7 @@ const Projects = () => {
   return (
     <div className="App">
       <Layout>
-        <h1 className="color-blue">Our Projects</h1>
+        <Title data={{ title: "Our Projects", colour: "color-blue" }} />
         {state === "start" && (
           <div className="project-container">
             {ProjectsData.data.map((project, index) => {
