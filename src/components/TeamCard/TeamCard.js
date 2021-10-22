@@ -2,213 +2,136 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./TeamCard.css";
-import SocialIcons from "../SocialIcons/SocialIcons";
+import SocialIcon from "../SocialIcon/SocialIcon";
 
-class TeamCard extends React.Component {
-  render() {
-    const data = this.props.data;
-
-    console.log(data);
-    return (
-      <React.Fragment>
-        <div style={{ paddingTop: 40 }}>
-          {data.leftPosition && (
-            <div
-              className="nes-container is-dark with-title"
-              style={{ paddingTop: 10 }}
-            >
-              <p className="title">{data.name}</p>
-
-              <div style={{ display: "flex" }}>
-                <img
-                  src={data.image}
-                  alt={data.name}
-                  style={{ width: "20%", height: "20%", borderRadius: "50%" }}
-                />
-                <div
-                  className="nes-balloon from-left is-dark"
-                  style={{ marginLeft: 30, marginBottom: 90 }}
-                >
-                  <p>{data.bio}</p>
-                </div>
+const TeamCard = ({ ...props }) => {
+  const data = props.data;
+  return (
+    <React.Fragment>
+      <div className="team-card">
+        {data.leftPosition && (
+          <div className="nes-container is-dark with-title">
+            <p className="title">{data.name}</p>
+            <div className="team-member-info-container-left">
+              <div className="team-image-container">
+                <img src={data.image} alt={data.name} />
               </div>
-
-              <SocialIcons
-                marginLeft={"0%"}
-                socialLinks={
-                  "https://www.linkedin.com/in/gerard-nagura-5308a217a/"
-                }
-              />
-              <div
-                style={{
-                  display: "flex",
-                }}
-              >
-                {/*First col of bars*/}
-                <div
-                  style={{
-                    width: "35%",
-                    marginLeft: "25%",
-                    marginTop: "-6%",
-                  }}
-                >
-                  {data.skillsPrimary.map((skill) => (
-                    <div key={skill} className="skill">
-                      <p
-                        style={{
-                          paddingTop: 15,
-                          width: "40%",
-                        }}
-                      >
-                        {skill.key}
-                      </p>
-                      <progress
-                        className={skill.colour}
-                        value={skill.value}
-                        max="100"
-                      ></progress>
-                    </div>
-                  ))}
-                </div>
-                <div
-                  style={{
-                    width: "35%",
-                    marginLeft: "5%",
-                    marginTop: "-6%",
-                  }}
-                >
-                  {/*Second col of bars*/}
-                  {data.skillsSecondary.map((skill) => (
-                    <div key={skill} className="skill">
-                      <p
-                        style={{
-                          paddingTop: 15,
-                          width: "40%",
-                        }}
-                      >
-                        {skill.key}
-                      </p>
-                      <progress
-                        className={skill.colour}
-                        value={skill.value}
-                        max="100"
-                      ></progress>
-                    </div>
-                  ))}
-                </div>
+              <div className="nes-balloon from-left is-dark">
+                <p>{data.bio}</p>
               </div>
             </div>
-          )}
-
-          {!data.leftPosition && (
-            <div
-              className="nes-container is-dark with-title is-right"
-              style={{ paddingTop: 10 }}
-            >
-              <p className="title">{data.name}</p>
-              <div style={{ display: "flex" }}>
-                <div
-                  className="nes-balloon from-right is-dark"
-                  style={{ marginLeft: 30, marginBottom: 90 }}
-                >
-                  <p>{data.bio}</p>
+            <div className="social-link-container">
+              {data.social.map((socialLink) => {
+                return (
+                  <SocialIcon
+                    key={socialLink.name}
+                    data={socialLink}
+                    margin={"0%"}
+                  />
+                );
+              })}
+            </div>
+            <div className="skill-list-container">
+              {data.skillsPrimary.map((skill) => {
+                return (
+                  <div key={skill} className="skill">
+                    <span>{skill.key}</span>
+                    <progress
+                      className={skill.colour}
+                      value={skill.value}
+                      max="100"
+                    ></progress>
+                  </div>
+                );
+              })}
+              {data.skillsSecondary.map((skill) => (
+                <div key={skill} className="skill">
+                  <span>{skill.key}</span>
+                  <progress
+                    className={skill.colour}
+                    value={skill.value}
+                    max="100"
+                  ></progress>
                 </div>
-                <img
-                  src={data.image}
-                  alt={data.name}
-                  style={{ width: "20%", height: "20%", borderRadius: "50%" }}
-                />
+              ))}
+            </div>
+          </div>
+        )}
+        {!data.leftPosition && (
+          <div className="nes-container is-dark is-right with-title">
+            <p className="title">{data.name}</p>
+            <div className="team-member-info-container-right">
+              <div className="nes-balloon from-right is-dark">
+                <p>{data.bio}</p>
               </div>
-              <SocialIcons marginLeft={"80%"} />
-              <div
-                style={{
-                  display: "flex",
-                }}
-              >
-                <div
-                  style={{
-                    width: "35%",
-                    marginLeft: "0%",
-                    marginTop: "-6%",
-                  }}
-                >
-                  {data.skillsPrimary.map((skill) => (
-                    <div key={skill} className="skill">
-                      <p
-                        style={{
-                          paddingTop: 15,
-                        }}
-                      >
-                        {skill.key}
-                      </p>
-                      <progress
-                        className={skill.colour}
-                        value={skill.value}
-                        max="100"
-                      ></progress>
-                    </div>
-                  ))}
-                </div>
-                <div
-                  style={{
-                    width: "35%",
-                    marginLeft: "5%",
-                    marginTop: "-6%",
-                  }}
-                >
-                  {data.skillsSecondary.map((skill) => (
-                    <div key={skill} className="skill">
-                      <p
-                        style={{
-                          paddingTop: 15,
-                        }}
-                      >
-                        {skill.key}
-                      </p>
-                      <progress
-                        className={skill.colour}
-                        value={skill.value}
-                        max="100"
-                      ></progress>
-                    </div>
-                  ))}
-                </div>
+              <div className="team-image-container">
+                <img src={data.image} alt={data.name} />
               </div>
             </div>
-          )}
-        </div>
-      </React.Fragment>
-    );
-  }
-}
+            <div className="social-link-container right">
+              {data.social.map((socialLink) => {
+                return <SocialIcon key={socialLink.name} data={socialLink} />;
+              })}
+            </div>
+            <div className="skill-list-container">
+              {data.skillsPrimary.map((skill) => {
+                return (
+                  <div key={skill} className="skill">
+                    <span>{skill.key}</span>
+                    <progress
+                      className={skill.colour}
+                      value={skill.value}
+                      max="100"
+                    ></progress>
+                  </div>
+                );
+              })}
+              {data.skillsSecondary.map((skill) => (
+                <div key={skill} className="skill">
+                  <span>{skill.key}</span>
+                  <progress
+                    className={skill.colour}
+                    value={skill.value}
+                    max="100"
+                  ></progress>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default TeamCard;
 
 TeamCard.propTypes = {
   data: PropTypes.shape({
-    name: PropTypes.string,
-    bio: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    bio: PropTypes.string.isRequired,
     skillsPrimary: PropTypes.arrayOf(
       PropTypes.shape({
-        key: PropTypes.string,
-        value: PropTypes.number,
-        colour: PropTypes.string,
+        key: PropTypes.string.isRequired,
+        value: PropTypes.number.isRequired,
+        colour: PropTypes.string.isRequired,
       })
     ),
     skillsSecondary: PropTypes.arrayOf(
       PropTypes.shape({
-        key: PropTypes.string,
-        value: PropTypes.number,
-        colour: PropTypes.string,
+        key: PropTypes.string.isRequired,
+        value: PropTypes.number.isRequired,
+        colour: PropTypes.string.isRequired,
       })
     ),
-
-    leftPosition: PropTypes.bool,
-    image: PropTypes.any,
-    social: PropTypes.shape({
-      linkedin: PropTypes.string,
-      github: PropTypes.string,
-      email: PropTypes.string,
-    }),
+    social: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        icon: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+      })
+    ),
+    leftPosition: PropTypes.bool.isRequired,
+    image: PropTypes.string.isRequired,
   }),
 };
-
-export default TeamCard;

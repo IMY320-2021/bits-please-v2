@@ -1,5 +1,6 @@
 import React from "react";
 
+import Layout from "../components/Layout/Layout";
 import TeamCard from "../components/TeamCard/TeamCard";
 import Title from "../components/Title/Title";
 import JdProfilePic from "../assets/images/profilepic/JdProfilePic.jpg";
@@ -17,11 +18,15 @@ const TeamData = [
       { key: "C++", value: 70, colour: "nes-progress is-warning" },
       { key: "React native", value: 60, colour: "nes-progress is-error" },
     ],
-    social: {
-      linkedin: "https://www.linkedin.com/in/jd-perumal/",
-      github: "https://github.com/JdPerumal",
-      email: "https://www.jdperumal.tech/",
-    },
+    social: [
+      {
+        name: "LinkedIn",
+        icon: "linkedin",
+        link: "https://www.linkedin.com/in/jd-perumal/",
+      },
+      { name: "GitHub", icon: "github", link: "https://github.com/JdPerumal" },
+      { name: "Email", icon: "gmail", link: "https://www.jdperumal.tech/" },
+    ],
     leftPosition: true,
     image: [`${JdProfilePic}`],
   },
@@ -29,18 +34,26 @@ const TeamData = [
     name: "Christoff Linde",
     bio: "Hard-working full-stack developer. My curiosity and dedication drive me to expand my skill set by exploring new technologies and concepts. By combining my strength in solving problems and my love for being creative, I create one-of-a-kind software experiences.",
     skillsPrimary: [
-      { key: "HTML", value: 90, colour: "nes-progress is-success" },
-      { key: " C++", value: 80, colour: "nes-progress is-primary" },
+      { key: "HTML & CSS", value: 85, colour: "nes-progress is-success" },
+      { key: " C++", value: 65, colour: "nes-progress is-primary" },
     ],
     skillsSecondary: [
-      { key: " Javascript", value: 70, colour: "nes-progress is-warning" },
-      { key: "Afrikaans", value: 60, colour: "nes-progress is-error" },
+      { key: " Javascript", value: 85, colour: "nes-progress is-warning" },
+      { key: "Unreal Engine", value: 67, colour: "nes-progress is-error" },
     ],
-    social: {
-      linkedin: "https://www.linkedin.com/in/christoff-linde/",
-      github: "https://github.com/christoff-linde",
-      email: "christoff.linde@gmail.com",
-    },
+    social: [
+      {
+        name: "LinkedIn",
+        icon: "linkedin",
+        link: "https://www.linkedin.com/in/christoff-linde/",
+      },
+      {
+        name: "GitHub",
+        icon: "github",
+        link: "https://github.com/christoff-linde",
+      },
+      { name: "Email", icon: "gmail", link: "christoff.linde@gmail.com" },
+    ],
     leftPosition: false,
     image: [`${JdProfilePic}`],
   },
@@ -55,11 +68,19 @@ const TeamData = [
       { key: "HTML", value: 70, colour: "nes-progress is-warning" },
       { key: "Afrikaans", value: 60, colour: "nes-progress is-error" },
     ],
-    social: {
-      linkedin: "https://www.linkedin.com/in/chanel-mulder-7273a31bb/",
-      github: "https://github.com/ChanelMulder",
-      email: "https://github.com/ChanelMulder",
-    },
+    social: [
+      {
+        name: "LinkedIn",
+        icon: "linkedin",
+        link: "https://www.linkedin.com/in/chanel-mulder-7273a31bb/",
+      },
+      {
+        name: "GitHub",
+        icon: "github",
+        link: "https://github.com/ChanelMulder",
+      },
+      { name: "Email", icon: "gmail", link: "https://github.com/ChanelMulder" },
+    ],
     leftPosition: true,
     image: [`${ChanelProfilePic}`],
   },
@@ -75,26 +96,37 @@ const TeamData = [
       { key: " Javascript", value: 70, colour: "nes-progress is-warning" },
       { key: "English", value: 60, colour: "nes-progress is-error" },
     ],
-    social: {
-      linkedin: "https://www.linkedin.com/in/gerard-nagura-5308a217a/",
-      github: "https://github.com/MaverickGDN0403",
-      email: "https://imy320-2021.github.io/Bits-Please/OurTeam#",
-    },
+    social: [
+      {
+        name: "LinkedIn",
+        icon: "linkedin",
+        link: "https://www.linkedin.com/in/gerard-nagura-5308a217a/",
+      },
+      {
+        name: "GitHub",
+        icon: "github",
+        link: "https://github.com/MaverickGDN0403",
+      },
+      {
+        name: "Email",
+        icon: "gmail",
+        link: "https://imy320-2021.github.io/Bits-Please/OurTeam#",
+      },
+    ],
     leftPosition: false,
     image: [`${JdProfilePic}`],
   },
 ];
 
 export default function OurTeam() {
-  console.log(TeamData);
   return (
     <div className="App">
-      <div className="nes-container with-title is-dark">
+      <Layout>
         <Title data={{ title: "Our team", colour: "color-yellow" }} />
         {TeamData.map((member) => {
           return <TeamCard key={member.name} data={member} />;
         })}
-      </div>
+      </Layout>
     </div>
   );
 }
