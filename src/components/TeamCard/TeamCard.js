@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./TeamCard.css";
-import JdProfilePic from "../../assets/images/profilepic/JdProfilePic.jpg"; // Tell webpack this JS file uses this image
 import SocialIcons from "../SocialIcons/SocialIcons";
 
 class TeamCard extends React.Component {
@@ -22,7 +21,7 @@ class TeamCard extends React.Component {
 
               <div style={{ display: "flex" }}>
                 <img
-                  src={JdProfilePic}
+                  src={data.image}
                   alt={data.name}
                   style={{ width: "20%", height: "20%", borderRadius: "50%" }}
                 />
@@ -110,8 +109,8 @@ class TeamCard extends React.Component {
                   <p>{data.bio}</p>
                 </div>
                 <img
-                  src={JdProfilePic}
-                  alt="Jd Perumal"
+                  src={data.image}
+                  alt={data.name}
                   style={{ width: "20%", height: "20%", borderRadius: "50%" }}
                 />
               </div>
@@ -198,6 +197,7 @@ TeamCard.propTypes = {
     ),
 
     leftPosition: PropTypes.bool,
+    image: PropTypes.any,
     social: PropTypes.shape({
       linkedin: PropTypes.string,
       github: PropTypes.string,
