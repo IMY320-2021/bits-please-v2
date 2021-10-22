@@ -10,7 +10,7 @@ class Title extends React.Component {
       <div style={{ display: "flex" }}>
         <Link
           className="nes-btn is-primary"
-          to="/Home"
+          to="/" //Goes to Home page
           style={{
             paddingTop: 10,
             paddingBottom: 10,
