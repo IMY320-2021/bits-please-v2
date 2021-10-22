@@ -5,10 +5,11 @@ import Title from "../components/Title/Title";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import ProjectPreviewCard from "../components/ProjectPreviewCard/ProjectPreviewCard";
 
-import GameProject from "../assets/images/project-images/game-project-1.png";
-import HarmonyOne from "../assets/images/project-images/harmony/harmony-1.png";
-import Light from "../assets/images/project-images/light/light.png";
 import LostConnection from "../assets/images/project-images/lost-connection/lost-connection.png";
+import Light from "../assets/images/project-images/light/light.png";
+import Blob from "../assets/images/project-images/blob/game-project-1.png";
+import HarmonyOne from "../assets/images/project-images/harmony/harmony-1.png";
+import GamingNation from "../assets/images/project-images/gaming-nation/gaming-nation.png";
 
 const Projects = () => {
   const [state, setState] = useState("start");
@@ -94,7 +95,6 @@ const ProjectsData = {
         },
       ],
     },
-
     {
       id: "gp-02",
       title: "Light",
@@ -122,17 +122,16 @@ const ProjectsData = {
         },
       ],
     },
-
     {
       id: "gp-01",
-      title: "Project 3",
+      title: "Blob",
       summary: "Game Project",
       description: `You are a Blob, a species of liquid organisms. Stranded in a desert, you must change the
                     environment around you to guide you safely back to the ocean. On your path, you will encounter
                     different biomes and dangers that will wear you down. It is a cruel world; hence you need to keep
                     your weight in check, otherwise you might not be able to pass the gates.
                     `,
-      image_url: `${GameProject}`,
+      image_url: `${Blob}`,
       tech: [
         {
           name: "Unreal Engine",
@@ -175,19 +174,28 @@ const ProjectsData = {
       ],
     },
     {
-      id: "gp-04",
-      title: "Project 5",
-      summary: "Game Project",
-      description: ``,
-      image_url: `${GameProject}`,
+      id: "cs-02",
+      title: "Gaming Nation",
+      summary: "Web App Project",
+      description: `Gaming Nation aims to provide gaming enthusiasts with a platform to gain knowledge regarding the latest gaming trends. Gaming Nation is aimed both at casual and avid gamers and hopes to connect like minded gamers via an integrated social networking platform.
+      Gaming Nation has multiple streams of information (e.g. Trending, Featured) to help inform users about new developments and projects in the gaming world. Gaming Nation has an integrated calender that informs users about upcoming release dates regarding new Games and related software.`,
+      image_url: `${GamingNation}`,
       tech: [
         {
-          name: "Unreal Engine",
-          description: "Game made using Unreal Engine 5.0 and Blueprints",
+          name: "HTML & CSS",
+          description: "Base website code",
         },
         {
-          name: "Blender 3D",
-          description: "All 3D modelling, texturing and animations",
+          name: "PHP",
+          description: "API scripting language",
+        },
+        {
+          name: "Java",
+          description: "Android App",
+        },
+        {
+          name: "MySQL",
+          description: "Database",
         },
       ],
     },
