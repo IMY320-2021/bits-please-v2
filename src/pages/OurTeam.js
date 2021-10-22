@@ -5,6 +5,7 @@ import TeamCard from "../components/TeamCard/TeamCard";
 import Title from "../components/Title/Title";
 import JdProfilePic from "../assets/images/profilepic/JdProfilePic.jpg";
 import ChanelProfilePic from "../assets/images/profilepic/ChanelProfilePic.jpg";
+import GerardProfilePic from "../assets/images/profilepic/GerardProfilePic.jpg";
 
 const TeamData = [
   {
@@ -25,7 +26,7 @@ const TeamData = [
         link: "https://www.linkedin.com/in/jd-perumal/",
       },
       { name: "GitHub", icon: "github", link: "https://github.com/JdPerumal" },
-      { name: "Email", icon: "gmail", link: "https://www.jdperumal.tech/" },
+      { name: "Email", icon: "gmail", link: "mailto: perumaljd@gmail.com" },
     ],
     leftPosition: true,
     image: [`${JdProfilePic}`],
@@ -52,7 +53,11 @@ const TeamData = [
         icon: "github",
         link: "https://github.com/christoff-linde",
       },
-      { name: "Email", icon: "gmail", link: "christoff.linde@gmail.com" },
+      {
+        name: "Email",
+        icon: "gmail",
+        link: "mailto: christoff.linde@gmail.com",
+      },
     ],
     leftPosition: false,
     image: [`${JdProfilePic}`],
@@ -66,7 +71,7 @@ const TeamData = [
     ],
     skillsSecondary: [
       { key: "HTML", value: 70, colour: "nes-progress is-warning" },
-      { key: "Afrikaans", value: 60, colour: "nes-progress is-error" },
+      { key: "MySQL &  jQuery", value: 60, colour: "nes-progress is-error" },
     ],
     social: [
       {
@@ -79,7 +84,7 @@ const TeamData = [
         icon: "github",
         link: "https://github.com/ChanelMulder",
       },
-      { name: "Email", icon: "gmail", link: "https://github.com/ChanelMulder" },
+      { name: "Email", icon: "gmail", link: "mailto: chanel.mulder@gmail.com" },
     ],
     leftPosition: true,
     image: [`${ChanelProfilePic}`],
@@ -110,11 +115,11 @@ const TeamData = [
       {
         name: "Email",
         icon: "gmail",
-        link: "https://imy320-2021.github.io/Bits-Please/OurTeam#",
+        link: "mailto: u19004232@tuks.co.za",
       },
     ],
     leftPosition: false,
-    image: [`${JdProfilePic}`],
+    image: [`${GerardProfilePic}`],
   },
 ];
 

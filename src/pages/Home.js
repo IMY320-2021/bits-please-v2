@@ -1,12 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
-
+import backgroundIMG from "../assets/images/8bitBackgroundImage.gif";
 export default function Home() {
   return (
     <div className="App">
       <Layout>
-        <div className="home-container">
+        <div
+          className="home-container"
+          style={{
+            backgroundImage: `url(${backgroundIMG})`,
+
+            /* Center and scale the image nicely */
+            "background-position": "center",
+            "background-repeat": "no-repeat",
+            "background-size": "cover",
+          }}
+        >
           <section className="icon-list" style={{ textAlign: "left" }}>
             <i className="nes-icon is-medium heart"></i>
             <i className="nes-icon is-medium heart"></i>
@@ -15,7 +25,7 @@ export default function Home() {
           </section>
           <h1>Bits Please</h1>
 
-          <ul style={{ paddingTop: 10, paddingRight: 10 }}>
+          <ul style={{ paddingTop: "10%", paddingBottom: "10%" }}>
             <li>
               <Link
                 className="nes-btn is-primary"
@@ -62,19 +72,6 @@ export default function Home() {
               </Link>
             </li>
           </ul>
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignContent: "center",
-            }}
-          >
-            <p style={{ paddingTop: 10, paddingRight: 10 }}>
-              insert coin to play
-            </p>
-            <i className="nes-icon coin is-medium"></i>
-          </div>
         </div>
       </Layout>
     </div>
