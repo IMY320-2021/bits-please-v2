@@ -8,21 +8,28 @@ const ProjectCard = ({ ...props }) => {
   const data = props.data;
 
   return (
-    <div className="project-card" onClick={props.viewProject}>
-      <h4 className="color-salmon">{data.title}</h4>
-      <p>{data.summary}</p>
-      <img src={data.image_url} alt={"undefined"} />
-      <p>{data.description}</p>
-      <h4 className="color-green">Tech Stack</h4>
-      {data.tech.map((tech, index) => {
-        return (
-          <React.Fragment key={index}>
-            <h6 className="color-yellow">{tech.name}</h6>
-            <p>{tech.description}</p>
-          </React.Fragment>
-        );
-      })}
-    </div>
+    <React.Fragment>
+      <div className="project-card" onClick={props.viewProject}>
+        <div className="project-card-header">
+          <h4 className="color-salmon">{data.title}</h4>
+          <button type="button" className="nes-btn">
+            <i className="nes-icon close"></i>
+          </button>
+        </div>
+        <p>{data.summary}</p>
+        <img src={data.image_url} alt={"undefined"} />
+        <p>{data.description}</p>
+        <h4 className="color-green">Tech Stack</h4>
+        {data.tech.map((tech, index) => {
+          return (
+            <React.Fragment key={index}>
+              <h6 className="color-yellow">{tech.name}</h6>
+              <p>{tech.description}</p>
+            </React.Fragment>
+          );
+        })}
+      </div>
+    </React.Fragment>
   );
 };
 

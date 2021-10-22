@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 
 class Title extends React.Component {
   render() {
-    const { title, colour } = this.props.data;
+    const { title, colour, location } = this.props.data;
+    const temp = location !== undefined ? location : "/Home";
 
     return (
       <div style={{ display: "flex" }}>
         <Link
           className="nes-btn is-primary"
-          to="/" //Goes to Home page
+          to={`${temp}`}
           style={{
             paddingTop: 10,
             paddingBottom: 10,
