@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function SocialIcons({ marginLeft }) {
+export default function SocialIcons({ marginLeft }, socialLinks) {
+  console.log("socials are...." + JSON.stringify(socialLinks));
   return (
     <div className="App">
       <div
@@ -13,13 +14,21 @@ export default function SocialIcons({ marginLeft }) {
           marginLeft: marginLeft,
         }}
       >
-        <i className="nes-icon gmail is-medium"></i>
-        <i className="nes-icon linkedin is-medium"></i>
-        <i className="nes-icon github is-medium"></i>
+        <a
+          href={socialLinks.linkedin}
+          className="nes-icon linkedin is-medium"
+        ></a>
+        <a href={socialLinks.email} className="nes-icon gmail is-medium"></a>
+        <a href={socialLinks.github} className="nes-icon github is-medium"></a>
       </div>
     </div>
   );
 }
 SocialIcons.propTypes = {
   marginLeft: PropTypes.string,
+  socialLinks: PropTypes.shape({
+    linkedin: PropTypes.string,
+    github: PropTypes.string,
+    email: PropTypes.string,
+  }),
 };

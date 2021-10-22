@@ -33,7 +33,12 @@ class TeamCard extends React.Component {
                 </div>
               </div>
 
-              <SocialIcons marginLeft={"0%"} />
+              <SocialIcons
+                marginLeft={"0%"}
+                socialLinks={
+                  "https://www.linkedin.com/in/gerard-nagura-5308a217a/"
+                }
+              />
               <div
                 style={{
                   display: "flex",
