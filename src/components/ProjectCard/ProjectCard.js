@@ -3,18 +3,12 @@ import PropTypes from "prop-types";
 
 import "./ProjectCard.css";
 import { object } from "prop-types";
-import Title from "../Title/Title";
 
 const ProjectCard = ({ ...props }) => {
   const data = props.data;
 
   return (
     <React.Fragment>
-      <Title
-        data={{ title: "Our Projects", colour: "color-blue" }}
-        location={`/Projects`}
-      />
-      {props.children}
       <div className="project-card" onClick={props.viewProject}>
         <h4 className="color-salmon">{data.title}</h4>
         <p>{data.summary}</p>
@@ -35,7 +29,6 @@ const ProjectCard = ({ ...props }) => {
 };
 
 ProjectCard.propTypes = {
-  children: PropTypes.element,
   data: PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,

@@ -16,9 +16,9 @@ const Projects = () => {
   return (
     <div className="App">
       <Layout>
+        <Title data={{ title: "Our Projects", colour: "color-blue" }} />
         {state === "start" && (
           <React.Fragment>
-            <Title data={{ title: "Our Projects", colour: "color-blue" }} />
             <div className="project-container">
               {ProjectsData.data.map((project, index) => {
                 return (
