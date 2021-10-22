@@ -59,7 +59,6 @@ const Projects = () => {
             data={ProjectDataFour}
           />
         )}
-        <Title data={{ title: "Projects", colour: "color-blue" }} />
       </Layout>
     </div>
   );
