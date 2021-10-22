@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./TeamCard.css";
-import JdProfilePic from "../../assets/images/profilepic/JdProfilePic.jpg"; // Tell webpack this JS file uses this image
+import SocialIcons from "../SocialIcons/SocialIcons";
+
 class TeamCard extends React.Component {
   render() {
     const data = this.props.data;
@@ -20,7 +21,7 @@ class TeamCard extends React.Component {
 
               <div style={{ display: "flex" }}>
                 <img
-                  src={JdProfilePic}
+                  src={data.image}
                   alt={data.name}
                   style={{ width: "20%", height: "20%", borderRadius: "50%" }}
                 />
@@ -32,23 +33,18 @@ class TeamCard extends React.Component {
                 </div>
               </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-evenly",
-                  width: "20%",
-                  paddingTop: 20,
-                }}
-              >
-                <i className="nes-icon gmail is-medium"></i>
-                <i className="nes-icon linkedin is-medium"></i>
-                <i className="nes-icon github is-medium"></i>
-              </div>
+              <SocialIcons
+                marginLeft={"0%"}
+                socialLinks={
+                  "https://www.linkedin.com/in/gerard-nagura-5308a217a/"
+                }
+              />
               <div
                 style={{
                   display: "flex",
                 }}
               >
+                {/*First col of bars*/}
                 <div
                   style={{
                     width: "35%",
@@ -56,7 +52,7 @@ class TeamCard extends React.Component {
                     marginTop: "-6%",
                   }}
                 >
-                  {data.skills.skillsPrimary.map((skill) => (
+                  {data.skillsPrimary.map((skill) => (
                     <div key={skill} className="skill">
                       <p
                         style={{
@@ -64,11 +60,11 @@ class TeamCard extends React.Component {
                           width: "40%",
                         }}
                       >
-                        {skill}
+                        {skill.key}
                       </p>
                       <progress
-                        className="nes-progress is-success"
-                        value="80"
+                        className={skill.colour}
+                        value={skill.value}
                         max="100"
                       ></progress>
                     </div>
@@ -81,7 +77,8 @@ class TeamCard extends React.Component {
                     marginTop: "-6%",
                   }}
                 >
-                  {data.skills.skillsSecondary.map((skill) => (
+                  {/*Second col of bars*/}
+                  {data.skillsSecondary.map((skill) => (
                     <div key={skill} className="skill">
                       <p
                         style={{
@@ -89,11 +86,11 @@ class TeamCard extends React.Component {
                           width: "40%",
                         }}
                       >
-                        {skill}
+                        {skill.key}
                       </p>
                       <progress
-                        className="nes-progress is-success"
-                        value="80"
+                        className={skill.colour}
+                        value={skill.value}
                         max="100"
                       ></progress>
                     </div>
@@ -108,7 +105,7 @@ class TeamCard extends React.Component {
               className="nes-container is-dark with-title is-right"
               style={{ paddingTop: 10 }}
             >
-              <p className="title">{data.name}</p>{" "}
+              <p className="title">{data.name}</p>
               <div style={{ display: "flex" }}>
                 <div
                   className="nes-balloon from-right is-dark"
@@ -117,24 +114,12 @@ class TeamCard extends React.Component {
                   <p>{data.bio}</p>
                 </div>
                 <img
-                  src={JdProfilePic}
-                  alt="Jd Perumal"
+                  src={data.image}
+                  alt={data.name}
                   style={{ width: "20%", height: "20%", borderRadius: "50%" }}
                 />
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-evenly",
-                  width: "20%",
-                  paddingTop: 10,
-                  marginLeft: "80%",
-                }}
-              >
-                <i className="nes-icon gmail is-medium"></i>
-                <i className="nes-icon linkedin is-medium"></i>
-                <i className="nes-icon github is-medium"></i>
-              </div>
+              <SocialIcons marginLeft={"80%"} />
               <div
                 style={{
                   display: "flex",
@@ -147,19 +132,18 @@ class TeamCard extends React.Component {
                     marginTop: "-6%",
                   }}
                 >
-                  {data.skills.skillsPrimary.map((skill) => (
+                  {data.skillsPrimary.map((skill) => (
                     <div key={skill} className="skill">
                       <p
                         style={{
                           paddingTop: 15,
-                          width: "40%",
                         }}
                       >
-                        {skill}
+                        {skill.key}
                       </p>
                       <progress
-                        className="nes-progress is-success"
-                        value="80"
+                        className={skill.colour}
+                        value={skill.value}
                         max="100"
                       ></progress>
                     </div>
@@ -172,19 +156,18 @@ class TeamCard extends React.Component {
                     marginTop: "-6%",
                   }}
                 >
-                  {data.skills.skillsSecondary.map((skill) => (
+                  {data.skillsSecondary.map((skill) => (
                     <div key={skill} className="skill">
                       <p
                         style={{
                           paddingTop: 15,
-                          width: "40%",
                         }}
                       >
-                        {skill}
+                        {skill.key}
                       </p>
                       <progress
-                        className="nes-progress is-success"
-                        value="80"
+                        className={skill.colour}
+                        value={skill.value}
                         max="100"
                       ></progress>
                     </div>
@@ -203,13 +186,23 @@ TeamCard.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string,
     bio: PropTypes.string,
-    skills: PropTypes.shape({
-      skillsPrimary: PropTypes.arrayOf(PropTypes.string),
-      skillsSecondary: PropTypes.arrayOf(PropTypes.string),
-      skillsPrimaryValues: PropTypes.arrayOf(PropTypes.number),
-      skillsSecondaryValues: PropTypes.arrayOf(PropTypes.number),
-    }),
+    skillsPrimary: PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.string,
+        value: PropTypes.number,
+        colour: PropTypes.string,
+      })
+    ),
+    skillsSecondary: PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.string,
+        value: PropTypes.number,
+        colour: PropTypes.string,
+      })
+    ),
+
     leftPosition: PropTypes.bool,
+    image: PropTypes.any,
     social: PropTypes.shape({
       linkedin: PropTypes.string,
       github: PropTypes.string,
