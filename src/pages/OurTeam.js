@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import TeamCard from "../components/TeamCard/TeamCard";
 import Title from "../components/Title/Title";
+import ChristoffProfilePic from "../assets/images/profilepic/ChristoffProfilePic.jpg";
 import JdProfilePic from "../assets/images/profilepic/JdProfilePic.jpg";
 import ChanelProfilePic from "../assets/images/profilepic/ChanelProfilePic.jpg";
 import GerardProfilePic from "../assets/images/profilepic/GerardProfilePic.jpg";
@@ -39,8 +40,8 @@ const TeamData = [
       { key: " C++", value: 65, colour: "nes-progress is-primary" },
     ],
     skillsSecondary: [
-      { key: " Javascript", value: 85, colour: "nes-progress is-warning" },
       { key: "Unreal Engine", value: 67, colour: "nes-progress is-error" },
+      { key: " Javascript", value: 85, colour: "nes-progress is-warning" },
     ],
     social: [
       {
@@ -60,7 +61,7 @@ const TeamData = [
       },
     ],
     leftPosition: false,
-    image: [`${JdProfilePic}`],
+    image: [`${ChristoffProfilePic}`],
   },
   {
     name: "Chanel Mulder",
