@@ -8,7 +8,7 @@ class Title extends React.Component {
     const temp = location !== undefined ? location : "/";
 
     return (
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", alignItems: "center" }}>
         <Link
           className="nes-btn is-primary"
           to={`${temp}`}
