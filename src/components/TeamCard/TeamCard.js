@@ -8,12 +8,14 @@ const TeamCard = ({ ...props }) => {
   const data = props.data;
   return (
     <React.Fragment>
-      <div>
+      <div className="team-card">
         {data.leftPosition && (
           <div className="nes-container is-dark with-title">
             <p className="title">{data.name}</p>
-            <div className="team-image-container">
-              <img src={data.image} alt={data.name} />
+            <div className="team-member-info-container-left">
+              <div className="team-image-container">
+                <img src={data.image} alt={data.name} />
+              </div>
               <div className="nes-balloon from-left is-dark">
                 <p>{data.bio}</p>
               </div>
@@ -58,13 +60,15 @@ const TeamCard = ({ ...props }) => {
         {!data.leftPosition && (
           <div className="nes-container is-dark is-right with-title">
             <p className="title">{data.name}</p>
-            <div className="team-image-container">
+            <div className="team-member-info-container-right">
               <div className="nes-balloon from-right is-dark">
                 <p>{data.bio}</p>
               </div>
-              <img src={data.image} alt={data.name} />
+              <div className="team-image-container">
+                <img src={data.image} alt={data.name} />
+              </div>
             </div>
-            <div className="social-link-container">
+            <div className="social-link-container right">
               {data.social.map((socialLink) => {
                 return <SocialIcon key={socialLink.name} data={socialLink} />;
               })}
