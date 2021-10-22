@@ -173,9 +173,9 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
-  font-size: var(--fontSize-1);
-  color: var(--color-text);
+  font-family: var(--font-body) !important;
+  font-size: var(--fontSize-1) !important;
+  color: var(--color-text) !important;
   background-color: var(--color-background) !important;
   background-color: var(--color-background);
 }
@@ -412,3 +412,9 @@ button:hover {
     transform: translate(-10%, 10%);
   }
 } */
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+  gap: 1rem;
+}
