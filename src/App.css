@@ -357,17 +357,6 @@ button:hover {
   background-color: var(--color-neon-purple);
 }
 
-.App::after {
-  background-image: url("./assets/images/vhs-overlay.png");
-  animation: grain 10s steps(100) infinite;
-  height: 300%;
-  left: -50%;
-  opacity: 0.03;
-  position: absolute;
-  top: -100%;
-  width: 300%;
-}
-
 @keyframes grain {
   0%,
   100% {
