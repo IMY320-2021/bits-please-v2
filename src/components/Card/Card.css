@@ -8,17 +8,9 @@
   padding: var(--spacing-8);
 }
 
-.card-image {
-  background-color: var(--color-neon-purple);
-}
-
 img[class] {
   width: 100%;
   max-height: 500px;
-}
-
-.is-dark {
-  /* padding: 0 !important; */
 }
 
 .object-fit_fill {
