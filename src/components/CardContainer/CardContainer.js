@@ -2,6 +2,11 @@ import React from "react";
 import Card from "../Card/Card";
 import "./CardContainer.css";
 
+import MugShot from "../../assets/images/store/mug.jpg";
+import Hoodie from "../../assets/images/store/hoodie.jpg";
+import LongTShirt from "../../assets/images/store/long-tshirt.jpg";
+import ShortTShirt from "../../assets/images/store/short-tshirt.jpg";
+
 const StoreData = {
   data: [
     {
@@ -9,10 +14,7 @@ const StoreData = {
       title: "Mug",
       description: "For coffee addicts, the perfect mug",
       price: 59.95,
-      image_url: [
-        "/media/images/shop/mug.jpg",
-        "../../../public/media/images/shop/mug.jpg",
-      ],
+      image_url: [`${MugShot}`],
       options: [
         { id: "mg-01-330", stock: true, option: "330ml" },
         { id: "mg-01-550", stock: true, option: "500ml" },
@@ -23,10 +25,7 @@ const StoreData = {
       title: "Hoodie",
       description: "A comfortable hoodie",
       price: 359.95,
-      image_url: [
-        "/media/images/shop/hoodie.jpg",
-        "../../../public/media/images/shop/hoodie.jpg",
-      ],
+      image_url: [`${Hoodie}`],
       options: [
         { id: "hd-01-xs", stock: true, option: "XS" },
         { id: "hd-01-s", stock: true, option: "S" },
@@ -40,10 +39,7 @@ const StoreData = {
       title: "Short Sleeve T-Shirt",
       description: "100% pure cotton short sleeve T-Shirt with printed graphic",
       price: 129.95,
-      image_url: [
-        "/media/images/shop/short-tshirt.jpg",
-        "../../../public/media/images/shop/short-tshirt.jpg",
-      ],
+      image_url: [`${ShortTShirt}`],
       options: [
         { id: "s-ts-01-xs", stock: true, option: "XS" },
         { id: "s-ts-01-s", stock: true, option: "S" },
@@ -57,10 +53,7 @@ const StoreData = {
       title: "Long Sleeve T-Shirt",
       description: "100% pure cotton long sleeve T-Shirt with printed graphic",
       price: 159.95,
-      image_url: [
-        "/media/images/shop/long-tshirt.jpg",
-        "../../../public/media/images/shop/long-tshirt.jpg",
-      ],
+      image_url: [`${LongTShirt}`],
       options: [
         { id: "ls-ts-01-s", stock: true, option: "S" },
         { id: "ls-ts-01-m", stock: true, option: "M" },

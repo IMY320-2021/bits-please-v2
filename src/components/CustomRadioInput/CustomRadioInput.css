@@ -1,9 +1,8 @@
 .custom-radio-input {
-  background-color: rebeccapurple;
+  background-color: var(--color-off-white);
   width: 100%;
   text-align: center;
   padding: var(--spacing-2);
-  background-color: var(--color-primary);
   color: var(--color-text-dark);
 }
 

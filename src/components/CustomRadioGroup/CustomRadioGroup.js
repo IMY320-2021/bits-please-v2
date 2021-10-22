@@ -7,14 +7,14 @@ class CustomRadioGroup extends React.Component {
   render() {
     const data = this.props.data;
     return (
-      <React.Fragment>
+      <div className="custom-radio-group">
         <h5>Options</h5>
-        <div className="custom-radio-group">
+        <div className="custom-radio-items">
           {data.map((option) => {
             return <CustomRadioInput key={option.id} data={option} />;
           })}
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }

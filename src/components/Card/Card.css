@@ -1,5 +1,7 @@
 .card {
   background-color: #292929;
+  border: 6px solid var(--color-off-white);
+  color: var(--color-text-light);
 }
 
 .card-body {
@@ -7,8 +9,30 @@
 }
 
 .card-image {
-  max-height: 414px;
-  height: 100%;
-  width: 100%;
   background-color: var(--color-neon-purple);
+}
+
+img[class] {
+  width: 100%;
+  max-height: 500px;
+}
+
+.is-dark {
+  /* padding: 0 !important; */
+}
+
+.object-fit_fill {
+  object-fit: fill;
+}
+.object-fit_contain {
+  object-fit: contain;
+}
+.object-fit_cover {
+  object-fit: cover;
+}
+.object-fit_none {
+  object-fit: none;
+}
+.object-fit_scale-down {
+  object-fit: scale-down;
 }
