@@ -1,0 +1,7 @@
+.project-preview-card > img {
+  width: 100%;
+}
+.project-preview-card {
+  border: 3px solid var(--color-off-white);
+  padding: var(--spacing-4);
+}

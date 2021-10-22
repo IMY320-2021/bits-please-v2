@@ -1,0 +1,6 @@
+.global-wrapper {
+  max-width: var(--maxWidth-16xl);
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--color-background);
+}

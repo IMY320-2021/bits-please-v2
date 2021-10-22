@@ -1,0 +1,52 @@
+.error {
+  color: var(--color-salmon);
+}
+
+.valid .feedback {
+  color: var(--color-green);
+}
+
+.invalid .feedback {
+  color: var(--color-salmon);
+}
+
+.error {
+  color: var(--color-salmon);
+}
+
+.success {
+  color: var(--color-green);
+}
+
+.input-feedback {
+  color: var(--color-salmon);
+  margin-top: 0.25rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.form-control {
+  margin-top: var(--spacing-4);
+}
+
+.form-control {
+  margin-bottom: var(--spacing-4);
+}
+
+input[class],
+textarea[class] {
+  border: 3px solid var(--color-off-white);
+  padding: var(--spacing-4);
+  background-color: var(--color-background);
+  color: var(--color-off-white);
+}

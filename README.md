@@ -1,6 +1,14 @@
-# Bits-Please
-An ecommerce’s website for our self-made content creation company.
+# Bits Please
 
+### An ecommerce’s website for our self-made content creation company.
+
+The website was made using ReactJS, and is hosted on GitHub Pages at [https://imy320-2021.github.io/bits-please-v2/](https://imy320-2021.github.io/bits-please-v2/)
+
+### Members
+[Chanel Mulder](https://github.com/ChanelMulder)
+[Christoff Linde](https://github.com/christoff-linde)
+[Jd Perumal](https://github.com/JdPerumal)
+[Gerard Nagura](https://github.com/MaverickGDN0403)
 ## Code Style Guide
 
 ### File Naming

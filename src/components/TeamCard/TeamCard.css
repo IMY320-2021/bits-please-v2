@@ -1,0 +1,13 @@
+.social-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-link {
+  cursor: pointer;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

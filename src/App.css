@@ -1,16 +1,16 @@
 @font-face {
   font-family: Kongtext;
-  src: url("./assets/kongtext-font/kongtext-regular.ttf");
+  src: url("./assets/fonts/kongtext-font/kongtext-regular.ttf");
 }
 
 @font-face {
   font-family: PressStart2P;
-  src: url("./assets/press-start-2p-font/press-start-2p.ttf");
+  src: url("./assets/fonts/press-start-2p-font/press-start-2p.ttf");
 }
 
 @font-face {
   font-family: SerifPixel;
-  src: url("./assets/serif-pixel-7-font/serif-pixel-7.ttf");
+  src: url("./assets/fonts/serif-pixel-7-font/serif-pixel-7.ttf");
 }
 
 :root {
@@ -76,18 +76,83 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #000033;
-  --color-text: #2e353f;
-  --color-text-light: #707070;
-  --color-heading: #000033;
+  --color-primary: #c4c4c4;
+  --color-text: #ffffff;
+  --color-text-light: #ffffff;
+  --color-text-dark: #131313;
+  --color-heading: #ffffff;
   --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-accent: #ffffff;
 
-  --color-background: #f0f0f0;
+  --color-neon-green: #98ff00;
+  --color-neon-blue: #00ffff;
+  --color-neon-purple: #bc13fe;
+
+  --color-background: #131313;
   --color-white: #ffffff;
+
+  /* Updated colour pallete */
+  --color-purple: #6e2594;
+  --color-blue: #209cee;
+  --color-green: #92cc41;
+  --color-yellow: #f7d51d;
+  --color-salmon: #e76e55;
+  --color-red: #df2935;
+  --color-dark-grey: #24292d;
+  --color-off-white: #f5f5f5;
 
   --icon-width: 47px;
   --icon-height: 47px;
+}
+
+.color-purple {
+  color: var(--color-purple);
+}
+.color-blue {
+  color: var(--color-blue);
+}
+.color-green {
+  color: var(--color-green);
+}
+.color-yellow {
+  color: var(--color-yellow);
+}
+.color-salmon {
+  color: var(--color-salmon);
+}
+.color-red {
+  color: var(--color-red);
+}
+.color-dark-grey {
+  color: var(--color-dark-grey);
+}
+.color-off-white {
+  color: var(--color-off-white);
+}
+
+.background-color-purple {
+  background-color: var(--color-purple);
+}
+.background-color-blue {
+  background-color: var(--color-blue);
+}
+.background-color-green {
+  background-color: var(--color-green);
+}
+.background-color-yellow {
+  background-color: var(--color-yellow);
+}
+.background-color-salmon {
+  background-color: var(--color-salmon);
+}
+.background-color-red {
+  background-color: var(--color-red);
+}
+.background-color-dark-grey {
+  background-color: var(--color-dark-grey);
+}
+.background-color-off-white {
+  background-color: var(--color-off-white);
 }
 
 /* HTML elements */
@@ -104,12 +169,14 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background-color: var(--color-background) !important;
 }
 
 body {
-  font-family: var(--font-body);
-  font-size: var(--fontSize-1);
-  color: var(--color-text);
+  font-family: var(--font-body) !important;
+  font-size: var(--fontSize-1) !important;
+  color: var(--color-text) !important;
+  background-color: var(--color-background) !important;
   background-color: var(--color-background);
 }
 
@@ -272,4 +339,82 @@ a:focus {
 
 html {
   background-color: var(--color-background);
+}
+
+/* Buttons */
+button {
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+  border: none;
+  padding: var(--spacing-4) var(--spacing-8);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--color-neon-purple);
+}
+
+.App::after {
+  background-image: url("./assets/images/vhs-overlay.png");
+  animation: grain 10s steps(100) infinite;
+  height: 300%;
+  left: -50%;
+  opacity: 0.03;
+  position: absolute;
+  top: -100%;
+  width: 300%;
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0%, -10%);
+  }
+}
+
+/* @keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+} */
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+  gap: 1rem;
 }

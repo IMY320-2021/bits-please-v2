@@ -1,11 +1,12 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
+import Title from "../components/Title/Title";
 
 export default function AboutUs() {
   return (
     <div className="App">
       <Layout>
-        <h1>About Us Page</h1>
+        <Title data={{ title: "About Us", colour: "color-green" }} />
       </Layout>
     </div>
   );
