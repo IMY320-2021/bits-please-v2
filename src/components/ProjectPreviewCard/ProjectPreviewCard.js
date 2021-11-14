@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./ProjectPreviewCard.css";
+import BadgeContainer from "../BadgeContainer/BadgeContainer";
 
 const ProjectPreviewCard = ({ ...props }) => {
   const data = props.data;
@@ -9,17 +10,7 @@ const ProjectPreviewCard = ({ ...props }) => {
   return (
     <div className="project-preview-card" onClick={props.viewProject}>
       <h4 className="">{data.title}</h4>
-      <div className="badge-container">
-        {data.tags.map((tag, index) => {
-          return (
-            // eslint-disable-next-line jsx-a11y/anchor-is-valid
-            <a href={undefined} className="nes-badge" key={index}>
-              <span className={`${tag.type}`}>{tag.title}</span>
-            </a>
-          );
-        })}
-      </div>
-
+      <BadgeContainer data={data.tags} />
       <p>{props.summary}</p>
       <img src={data.image_url} alt={"undefined"} />
     </div>
