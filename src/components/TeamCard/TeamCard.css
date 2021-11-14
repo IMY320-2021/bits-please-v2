@@ -1,13 +1,65 @@
-.social-links {
-  display: flex;
-  gap: 2rem;
-}
-
 .social-link {
   cursor: pointer;
 }
 
-.skills-list {
+.skill-list-container {
   display: grid;
+  gap: 1rem;
   grid-template-columns: 1fr 1fr;
+}
+
+.social-link-container {
+  display: flex;
+  gap: 1em;
+  margin-top: var(--spacing-4);
+  margin-bottom: var(--spacing-2);
+}
+
+.social-link-container.right {
+  justify-content: flex-end;
+}
+
+.skill > span {
+  margin-top: var(--spacing-4);
+  width: 40%;
+}
+
+.team-image-container {
+  display: flex;
+  padding: var(--spacing-4);
+}
+
+.team-image-container > img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.social-icon:hover {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+.team-member-info-container-left {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+.team-member-info-container-right {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+
+.team-member-info-container > .nes-balloon {
+  height: fit-content;
+}
+
+.team-card {
+  margin-top: var(--spacing-6);
 }

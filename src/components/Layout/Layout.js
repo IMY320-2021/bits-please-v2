@@ -6,8 +6,8 @@ import "./Layout.css";
 
 const Layout = ({ children }) => {
   return (
-    <div className="global-wrapper nes-container is-dark full-width">
-      {children}
+    <div className="global-wrapper ">
+      <div className="nes-container is-dark full-width">{children}</div>
     </div>
   );
 };

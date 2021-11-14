@@ -48,6 +48,10 @@
   --spacing-24: 6rem;
   --spacing-32: 8rem;
   --spacing-42: 10rem;
+  --border-size: 4px;
+  --border-color: #ffffff;
+  --border-type: solid;
+  --border-white: var(--border-size) var(--border-type) var(--border-color);
   --fontFamily-sans: PressStart2P, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -173,9 +177,9 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
-  font-size: var(--fontSize-1);
-  color: var(--color-text);
+  font-family: var(--font-body) !important;
+  font-size: var(--fontSize-1) !important;
+  color: var(--color-text) !important;
   background-color: var(--color-background) !important;
   background-color: var(--color-background);
 }
@@ -357,17 +361,6 @@ button:hover {
   background-color: var(--color-neon-purple);
 }
 
-.App::after {
-  background-image: url("./assets/images/vhs-overlay.png");
-  animation: grain 10s steps(100) infinite;
-  height: 300%;
-  left: -50%;
-  opacity: 0.03;
-  position: absolute;
-  top: -100%;
-  width: 300%;
-}
-
 @keyframes grain {
   0%,
   100% {
@@ -412,3 +405,13 @@ button:hover {
     transform: translate(-10%, 10%);
   }
 } */
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+  gap: 1rem;
+}
+
+.home-container {
+  text-align: center;
+}

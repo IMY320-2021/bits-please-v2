@@ -1,0 +1,15 @@
+.project-card > img {
+  width: 100%;
+  margin-bottom: var(--spacing-6);
+}
+
+.project-card {
+  border: var(--border-white);
+  padding: var(--spacing-4);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
