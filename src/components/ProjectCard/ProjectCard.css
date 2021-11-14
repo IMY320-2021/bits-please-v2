@@ -4,6 +4,12 @@
 }
 
 .project-card {
-  border: 3px solid var(--color-off-white);
+  border: var(--border-white);
   padding: var(--spacing-4);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
