@@ -11,6 +11,29 @@ import Blob from "../assets/images/project-images/blob/game-project-1.png";
 import HarmonyOne from "../assets/images/project-images/harmony/harmony-1.png";
 import GamingNation from "../assets/images/project-images/gaming-nation/gaming-nation.png";
 
+const tagTypes = {
+  game: {
+    title: "Game Project",
+    type: "is-primary",
+  },
+  shortfilm: {
+    title: "Short Film",
+    type: "is-success",
+  },
+  web: {
+    title: "Web Project",
+    type: "is-warning",
+  },
+  UiUx: {
+    title: "UI/UX",
+    type: "is-error",
+  },
+  threeD: {
+    title: "3D",
+    type: "is-warning",
+  },
+};
+
 const Projects = () => {
   const [state, setState] = useState("start");
 
@@ -26,9 +49,10 @@ const Projects = () => {
                   <ProjectPreviewCard
                     viewProject={() => setState(`show-project-${index}`)}
                     key={project.id}
-                    title={project.title}
-                    summary={project.summary}
-                    image_url={project.image_url}
+                    // title={project.title}
+                    // summary={project.summary}
+                    // image_url={project.image_url}
+                    data={project}
                   />
                 );
               })}
@@ -80,6 +104,7 @@ const ProjectsData = {
     {
       id: "mov-01",
       title: "Lost Connection",
+      tags: [tagTypes.shortfilm],
       summary: "Horror Film",
       description: ``,
       image_url: `${LostConnection}`,
@@ -98,6 +123,7 @@ const ProjectsData = {
     {
       id: "gp-02",
       title: "Light",
+      tags: [tagTypes.game, tagTypes.threeD],
       summary: "Game Project",
       description: `Horror game, works with sound instead of visuals. The player navigates through a haunted forest in the middle of the night and cannot see the difference between the monsters lurking in the woods and the trees, players try to find their sibling during the game who ran away into the forest and get mind tricked by moving trees and/or monsters as well as the use of sound. They make use of a compass on their phone which acts as their only source of light but the battery needs to be used sparingly since this is also the only way to stay on the path and keep your character's mental health good, the use of the character's heartbeat, breathing and phone helps the player know if they are on the right path to find their sibling and exit the forest, when dwelling off of the path you risk your characters mentality and increase the risk of running into a monster and getting killed.`,
       image_url: `${Light}`,
@@ -125,6 +151,7 @@ const ProjectsData = {
     {
       id: "gp-01",
       title: "Blob",
+      tags: [tagTypes.game, tagTypes.threeD],
       summary: "Game Project",
       description: `You are a Blob, a species of liquid organisms. Stranded in a desert, you must change the
                     environment around you to guide you safely back to the ocean. On your path, you will encounter
@@ -149,6 +176,7 @@ const ProjectsData = {
     },
     {
       id: "cs-01",
+      tags: [tagTypes.web, tagTypes.UiUx],
       title: "Harmony",
       summary: "Software Engineering Project",
       description: `Visiting South Africa a tourist would not know what South African foods are, let alone what it pairs well with, Harmony solves this by allowing you to pull out your phone, take a picture of the food and its drink pairings will be presented to you, but it doesn't stop there, using continuous AI Harmony will provide the best possible pairings as it learns and develops over time.
@@ -176,6 +204,7 @@ const ProjectsData = {
     {
       id: "cs-02",
       title: "Gaming Nation",
+      tags: [tagTypes.web, tagTypes.UiUx],
       summary: "Web App Project",
       description: `Gaming Nation aims to provide gaming enthusiasts with a platform to gain knowledge regarding the latest gaming trends. Gaming Nation is aimed both at casual and avid gamers and hopes to connect like minded gamers via an integrated social networking platform.
       Gaming Nation has multiple streams of information (e.g. Trending, Featured) to help inform users about new developments and projects in the gaming world. Gaming Nation has an integrated calender that informs users about upcoming release dates regarding new Games and related software.`,
