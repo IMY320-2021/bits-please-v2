@@ -1,3 +1,5 @@
+![CodeQL](https://github.com/IMY320-2021/bits-please-v2/workflows/CodeQL/badge.svg)
+
 # Bits Please
 
 ### An ecommerce’s website for our self-made content creation company.
