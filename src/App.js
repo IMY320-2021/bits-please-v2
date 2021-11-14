@@ -9,6 +9,8 @@ import AboutUs from "./pages/AboutUs";
 import OurTeam from "./pages/OurTeam";
 import ContactUs from "./pages/ContactUs";
 
+import "swiper/swiper.min.css";
+
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
