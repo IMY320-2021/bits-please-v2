@@ -35,6 +35,7 @@ const ProjectDataOne = {
     },
   ],
 };
+
 const ProjectDataTwo = {
   data: [
     {
@@ -62,6 +63,7 @@ const ProjectDataThree = {
     },
   ],
 };
+
 const ProjectDataFour = {
   data: [
     {
@@ -147,48 +149,33 @@ const ProjectContainer = () => {
       {state === "show-project-0" && (
         <ProjectCard
           viewProject={() => setState(`start`)}
-          title={ProjectDataZero.data[0].title}
-          description={ProjectDataZero.data[0].description}
-          image_url={ProjectDataZero.data[0].image_url}
+          data={ProjectDataZero}
         />
       )}
       {state === "show-project-1" && (
         <ProjectCard
           viewProject={() => setState(`start`)}
-          title={ProjectDataOne.data[0].title}
-          description={ProjectDataOne.data[0].description}
-          image_url={ProjectDataOne.data[0].image_url}
+          data={ProjectDataOne}
         />
       )}
       {state === "show-project-2" && (
         <ProjectCard
           viewProject={() => setState(`start`)}
-          title={ProjectDataTwo.data[0].title}
-          description={ProjectDataTwo.data[0].description}
-          image_url={ProjectDataTwo.data[0].image_url}
+          data={ProjectDataTwo}
         />
       )}
       {state === "show-project-3" && (
         <ProjectCard
           viewProject={() => setState(`start`)}
-          title={ProjectDataThree.data[0].title}
-          description={ProjectDataThree.data[0].description}
-          image_url={ProjectDataThree.data[0].image_url}
+          data={ProjectDataThree}
         />
       )}
       {state === "show-project-4" && (
         <ProjectCard
           viewProject={() => setState(`start`)}
-          title={ProjectDataFour.data[0].title}
-          description={ProjectDataFour.data[0].description}
-          image_url={ProjectDataFour.data[0].image_url}
+          data={ProjectDataFour}
         />
       )}
-      {/* <ProjectCard
-        title={ProjectsData.data[0].title}
-        description={ProjectsData.data[0].description}
-        image_url={ProjectsData.data[0].image_url}
-      /> */}
     </div>
   );
 };
