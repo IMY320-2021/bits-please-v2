@@ -10,6 +10,7 @@ import Light from "../assets/images/project-images/light/light.png";
 import Blob from "../assets/images/project-images/blob/game-project-1.png";
 import HarmonyOne from "../assets/images/project-images/harmony/harmony-1.png";
 import GamingNation from "../assets/images/project-images/gaming-nation/gaming-nation.png";
+import Carousel from "../components/Carousel/Carousel";
 
 const tagTypes = {
   game: {
@@ -41,7 +42,8 @@ const Projects = () => {
     <div className="App">
       <Layout>
         <Title data={{ title: "Our Projects", colour: "color-blue" }} />
-        {state === "start" && (
+        <Carousel data={ProjectsData.data} />
+        {/* {state === "start" && (
           <React.Fragment>
             <div className="project-container">
               {ProjectsData.data.map((project, index) => {
@@ -91,7 +93,7 @@ const Projects = () => {
             viewProject={() => setState(`start`)}
             data={ProjectDataFour}
           />
-        )}
+        )} */}
       </Layout>
     </div>
   );
