@@ -18,6 +18,16 @@ const socialLinks = {
       icon: "gmail",
       link: "mailto:info.bitsplease@gmail.com",
     },
+    {
+      name: "Instagram",
+      icon: "instagram",
+      link: "https://www.instagram.com/",
+    },
+    {
+      name: "Twitter",
+      icon: "twitter",
+      link: "https://twitter.com/",
+    },
   ],
 };
 
