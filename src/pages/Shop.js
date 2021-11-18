@@ -9,8 +9,8 @@ export default function Shop() {
     <Layout>
       <Title data={{ title: "Merch Shop", colour: "color-salmon" }} />
       <CartProvider>
-        <CardContainer />
         <Cart />
+        <CardContainer />
       </CartProvider>
     </Layout>
   );
@@ -29,7 +29,7 @@ function Cart() {
       <ul>
         {items.map((item) => (
           <li key={item.id}>
-            {item.quantity} x {item.name} &mdash;
+            {item.quantity} x {item.title} &mdash; {"R" + item.price + " Each "}
             <button
               onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
             >
