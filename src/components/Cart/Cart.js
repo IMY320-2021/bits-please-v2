@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useCart } from "react-use-cart";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
+import "../Cart/Cart.css";
+
 export default function Cart() {
   const [open, setOpen] = useState(false);
 
@@ -15,7 +17,15 @@ export default function Cart() {
     <>
       <div>
         <button onClick={onOpenModal}>Cart</button>
-        <Modal open={open} onClose={onCloseModal} center>
+        <Modal
+          open={open}
+          onClose={onCloseModal}
+          center
+          classNames={{
+            overlay: "customOverlay",
+            modal: "customModal",
+          }}
+        >
           <h1>Cart ({totalUniqueItems})</h1>
           {isEmpty && <p>Your cart is empty</p>}
           <ul>

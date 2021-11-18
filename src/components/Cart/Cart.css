@@ -1,0 +1,9 @@
+/* examples/custom-styling.css */
+.customOverlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+.customModal {
+  background: #24292d;
+  max-width: 500px;
+  width: 100%;
+}
