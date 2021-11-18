@@ -11,14 +11,13 @@ export default function Cart() {
   const { isEmpty, totalUniqueItems, items, updateItemQuantity, removeItem } =
     useCart();
 
-  if (isEmpty) return <p>Your cart is empty</p>;
-
   return (
     <>
       <div>
-        <button onClick={onOpenModal}>Open modal</button>
+        <button onClick={onOpenModal}>Cart</button>
         <Modal open={open} onClose={onCloseModal} center>
           <h1>Cart ({totalUniqueItems})</h1>
+          {isEmpty && <p>Your cart is empty</p>}
           <ul>
             {items.map((item) => (
               <li key={item.id}>
