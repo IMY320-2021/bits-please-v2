@@ -64,65 +64,69 @@ export default function Cart() {
           }}
         >
           <h1>Cart ({totalItems})</h1>
-          {isEmpty && <p>Your cart is empty</p>}
+          {isEmpty ? (
+            <p>Your cart is empty</p>
+          ) : (
+            <div>
+              <table>
+                <thead>
+                  <th>Item </th>
+                  <th>Size </th>
+                  <th>Price each</th>
+                  <th>Quantity</th>
+                </thead>
+                <tbody>
+                  {items.map((item) => (
+                    <tr key={item.id}>
+                      <td> {item.title} </td>
+                      <td> {item.options[0].option} </td>
+                      <td> {"R" + item.price} </td>
 
-          <table>
-            <thead>
-              <th>Item </th>
-              <th>Size </th>
-              <th>Price each</th>
-              <th>Quantity</th>
-            </thead>
-            <tbody>
-              {items.map((item) => (
-                <tr key={item.id}>
-                  <td> {item.title} </td>
-                  <td> {item.options[0].option} </td>
-                  <td> {"R" + item.price} </td>
-
-                  <td>
-                    <button
-                      className="nes-btn is-primary"
-                      type="button"
-                      onClick={() =>
-                        updateItemQuantity(item.id, item.quantity - 1)
-                      }
-                    >
-                      -
-                    </button>
-                    {" " + item.quantity + " "}
-                    <button
-                      className="nes-btn is-primary"
-                      type="button"
-                      onClick={() =>
-                        updateItemQuantity(item.id, item.quantity + 1)
-                      }
-                    >
-                      +
-                    </button>
-                    <button
-                      className="nes-btn is-error"
-                      type="button"
-                      onClick={() => removeItem(item.id)}
-                    >
-                      &times;
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <h3 className="total">Total R{cartTotal}</h3>
-          <button
-            className="nes-btn is-success checkOut"
-            type="button"
-            onClick={() => {
-              emptyCart();
-              onCloseModal();
-            }}
-          >
-            Checkout
-          </button>
+                      <td>
+                        <button
+                          className="nes-btn is-primary"
+                          type="button"
+                          onClick={() =>
+                            updateItemQuantity(item.id, item.quantity - 1)
+                          }
+                        >
+                          -
+                        </button>
+                        {" " + item.quantity + " "}
+                        <button
+                          className="nes-btn is-primary"
+                          type="button"
+                          onClick={() =>
+                            updateItemQuantity(item.id, item.quantity + 1)
+                          }
+                        >
+                          +
+                        </button>
+                        <button
+                          className="nes-btn is-error"
+                          type="button"
+                          onClick={() => removeItem(item.id)}
+                        >
+                          &times;
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <h3 className="total">Total R{cartTotal}</h3>
+              <button
+                className="nes-btn is-success checkOut"
+                type="button"
+                onClick={() => {
+                  emptyCart();
+                  onCloseModal();
+                }}
+              >
+                Checkout
+              </button>
+            </div>
+          )}
         </Modal>
       </div>
     </>
