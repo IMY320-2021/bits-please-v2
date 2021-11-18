@@ -15,6 +15,7 @@ export default function Cart() {
     totalItems,
     items,
     cartTotal,
+    emptyCart,
     updateItemQuantity,
     removeItem,
   } = useCart();
@@ -112,7 +113,14 @@ export default function Cart() {
             </tbody>
           </table>
           <h3 className="total">Total R{cartTotal}</h3>
-          <button className="nes-btn is-success checkOut" type="button">
+          <button
+            className="nes-btn is-success checkOut"
+            type="button"
+            onClick={() => {
+              emptyCart();
+              onCloseModal();
+            }}
+          >
             Checkout
           </button>
         </Modal>
