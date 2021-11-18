@@ -80,6 +80,7 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
+  --fontSize-8: 3.583rem;
   --color-primary: #c4c4c4;
   --color-text: #ffffff;
   --color-text-light: #ffffff;
@@ -222,6 +223,14 @@ h1 {
   font-weight: var(--fontWeight-bold);
   font-size: var(--fontSize-6);
   color: var(--color-heading);
+}
+
+h1.xl {
+  font-size: var(--fontSize-7);
+}
+
+h1.xxl {
+  font-size: var(--fontSize-8);
 }
 
 h2 {
