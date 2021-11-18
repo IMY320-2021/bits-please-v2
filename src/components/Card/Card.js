@@ -2,9 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import CustomRadioGroup from "../CustomRadioGroup/CustomRadioGroup";
 import "./Card.css";
+import { useCart } from "react-use-cart";
 
 export default function Card({ data }) {
   const product = data;
+  const { addItem } = useCart();
 
   return (
     <div className="card">
@@ -22,7 +24,11 @@ export default function Card({ data }) {
         <p>{product.description}</p>
         <h2 className="price-heading color-green">R {product.price}</h2>
         <CustomRadioGroup data={product.options} />
-        <button className="nes-btn is-primary" type="button">
+        <button
+          className="nes-btn is-primary"
+          type="button"
+          onClick={() => addItem(product)}
+        >
           ADD TO CART
         </button>
       </div>
