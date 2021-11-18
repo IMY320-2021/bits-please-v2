@@ -3,15 +3,11 @@ import PropTypes from "prop-types";
 import CustomRadioGroup from "../CustomRadioGroup/CustomRadioGroup";
 import "./Card.css";
 
-// class Card extends React.Component {
 export default function Card({ data }) {
-  // render() {
-
   const product = data;
 
   return (
     <div className="card">
-      {/* <div className="card nes-container is-dark"> */}
       <div className="card-header">
         <div className="card-image">
           <img
@@ -32,7 +28,6 @@ export default function Card({ data }) {
       </div>
     </div>
   );
-  //   }
 }
 
 Card.propTypes = {
