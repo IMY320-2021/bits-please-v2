@@ -10,8 +10,14 @@ export default function Cart() {
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
 
-  const { isEmpty, totalItems, items, updateItemQuantity, removeItem } =
-    useCart();
+  const {
+    isEmpty,
+    totalItems,
+    items,
+    cartTotal,
+    updateItemQuantity,
+    removeItem,
+  } = useCart();
 
   const closeIcon = (
     <button type="button" className="nes-btn">
@@ -102,7 +108,7 @@ export default function Cart() {
               ))}
             </tbody>
           </table>
-          <h3 className="total">Total {"R5000"}</h3>
+          <h3 className="total">Total {cartTotal}</h3>
           <button className="nes-btn is-success checkOut" type="button">
             Checkout
           </button>
