@@ -18,6 +18,7 @@ export default function Cart() {
     updateItemQuantity,
     removeItem,
   } = useCart();
+  console.log(items);
 
   const closeIcon = (
     <button type="button" className="nes-btn">
@@ -67,6 +68,7 @@ export default function Cart() {
           <table>
             <thead>
               <th>Item </th>
+              <th>Size </th>
               <th>Price each</th>
               <th>Quantity</th>
             </thead>
@@ -74,6 +76,7 @@ export default function Cart() {
               {items.map((item) => (
                 <tr key={item.id}>
                   <td> {item.title} </td>
+                  <td> {item.options[0].option} </td>
                   <td> {"R" + item.price} </td>
 
                   <td>
@@ -108,7 +111,7 @@ export default function Cart() {
               ))}
             </tbody>
           </table>
-          <h3 className="total">Total {cartTotal}</h3>
+          <h3 className="total">Total R{cartTotal}</h3>
           <button className="nes-btn is-success checkOut" type="button">
             Checkout
           </button>
