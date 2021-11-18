@@ -4,6 +4,14 @@
 }
 .customModal {
   background: #24292d;
-  max-width: 500px;
   width: 100%;
+  height: 57%;
+}
+
+.total {
+  text-align: right;
+}
+
+.checkOut {
+  float: right;
 }

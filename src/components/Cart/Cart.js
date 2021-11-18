@@ -70,6 +70,11 @@ export default function Cart() {
               </li>
             ))}
           </ul>
+
+          <h3 className="total">Total {"R5000"}</h3>
+          <button className="nes-btn is-success checkOut" type="button">
+            Checkout
+          </button>
         </Modal>
       </div>
     </>
