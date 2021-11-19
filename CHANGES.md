@@ -48,6 +48,8 @@ Text was aligned to the left, making the content easier to read. To reinforce a 
 
 ### About Us
 
+This page was not implemented for the first meeting, so there is no changes.
+
 ### Our Team
 
 For the *Our Team* page, the content was kept more-or-less the same. The first change we made was to have the position of the images of each person alternate between left-aligned and right-aligned. This creates a different visual balance, and enhances the feel of the webpage.
@@ -55,6 +57,8 @@ For the *Our Team* page, the content was kept more-or-less the same. The first c
 The icons present for the social links for each person was initially in a modern clean svg style. This was changed to be pixelated to fit in with the overarching look and feel of the website.
 
 For the list of skills, we wanted to represent the information in a more visual way. Thus, we chose to keep with the game feel and use progress bars for each of the skills. This provides the user with visual information that should be easier to interperet and read.
+
+We also made use of speech bubbles on the Our Team page similar to how characters in game would talk which further enhances the overarching theme.
 
 ### Contact Us
 

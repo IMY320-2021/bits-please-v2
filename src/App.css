@@ -48,6 +48,10 @@
   --spacing-24: 6rem;
   --spacing-32: 8rem;
   --spacing-42: 10rem;
+  --border-size: 4px;
+  --border-color: #ffffff;
+  --border-type: solid;
+  --border-white: var(--border-size) var(--border-type) var(--border-color);
   --fontFamily-sans: PressStart2P, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -86,7 +90,7 @@
 
   --color-neon-green: #98ff00;
   --color-neon-blue: #00ffff;
-  --color-neon-purple: #bc13fe;
+  /* --color-neon-purple: #bc13fe; */
 
   --color-background: #131313;
   --color-white: #ffffff;

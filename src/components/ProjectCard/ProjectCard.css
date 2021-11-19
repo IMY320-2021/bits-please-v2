@@ -1,10 +1,10 @@
-.project-card > img {
+.project-card img {
   width: 100%;
   margin-bottom: var(--spacing-6);
 }
 
 .project-card {
-  border: 3px solid var(--color-off-white);
+  /* border: var(--border-white); */
   padding: var(--spacing-4);
 }
 
@@ -12,4 +12,11 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+}
+
+.project-card-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
 }

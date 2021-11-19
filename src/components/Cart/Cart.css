@@ -1,0 +1,22 @@
+/* examples/custom-styling.css */
+.customOverlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+.customModal {
+  background: #24292d;
+  width: 100%;
+}
+
+.total {
+  padding-top: 2%;
+  float: right;
+  padding-right: 2%;
+}
+
+.checkOut {
+  float: right;
+}
+
+.checkOutText {
+  font-size: 20px;
+}

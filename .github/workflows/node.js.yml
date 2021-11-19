@@ -28,7 +28,7 @@ jobs:
         cache: 'npm'
 
     - name: Install Node.js
-      run: npm install
+      run: npm install --ignore-engines
 
     - name: Build Project
       run: npm run build

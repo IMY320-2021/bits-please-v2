@@ -1,24 +1,21 @@
 .card {
   background-color: #292929;
-  border: 6px solid var(--color-off-white);
+  border: var(--border-white);
   color: var(--color-text-light);
 }
 
 .card-body {
   padding: var(--spacing-8);
-}
-
-.card-image {
-  background-color: var(--color-neon-purple);
+  display: grid;
 }
 
 img[class] {
   width: 100%;
-  max-height: 500px;
+  max-height: 400px;
 }
 
-.is-dark {
-  /* padding: 0 !important; */
+.product-description {
+  /* height: 100px; */
 }
 
 .object-fit_fill {
