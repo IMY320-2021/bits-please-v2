@@ -9,13 +9,12 @@ The website was made using ReactJS, and is hosted on GitHub Pages at [https://im
 
 ### Members
 
-[Chanel Mulder](https://github.com/ChanelMulder)
-
-[Christoff Linde](https://github.com/christoff-linde)
-
-[Jd Perumal](https://github.com/JdPerumal)
-
-[Gerard Nagura](https://github.com/MaverickGDN0403)
+| Student Number | Name                                                  | Role                       |
+| -------------- | ----------------------------------------------------- | -------------------------- |
+| U18163841      | [Christoff Linde](https://github.com/christoff-linde) | Development, CI/CD         |
+| U18219285      | [Jd Perumal](https://github.com/JdPerumal)            | Development, Documentation |
+| U18292705      | [Chanel Mulder](https://github.com/ChanelMulder)      | UI Design, User Testing    |
+| U19004232      | [Gerard Nagura](https://github.com/MaverickGDN0403)   | UI Design, User Testing    |
 
 ### List of Changes Document
 
@@ -26,12 +25,15 @@ A document containing a [List of Changes](https://github.com/IMY320-2021/bits-pl
 ## Code Style Guide
 
 ### File Naming
+
 For all files and classes, use `PascalCase`.
+
 ```
 FileName.js
 ```
 
 ### Folder Structure
+
 ```
 ├ src
 ├── assets              // Folder for all assets (for e.g., images, icons, etc.)
@@ -100,56 +102,16 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Available Scripts
+### `yarn lint`
 
-In the project directory, you can run:
+The project is linted using `eslint` to ensure that code is written in a consistent style, and to prevent errors or bad coding practices.
 
-### `npm start`
+### `yarn lint:fix`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The project is linted using `eslint` to ensure that code is written in a consistent style, and to prevent errors or bad coding practices.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Where possible, the linting errors and warings are automatically fixed.
 
-### `npm test`
+### `yarn format`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-### `npm run predeploy`
-
-Is automatically executed before `deploy` is executed.
-Simply runs `npm run build`.
-
-### `npm run deploy`
-
-Builds the app for production to the `build` folder.
-The project is then published to GitHub Pages, where it will be hosted for in a production environemnt.
-
-To view the deployment, open [https://imy320-2021.github.io/Bits-Please/](https://imy320-2021.github.io/Bits-Please/) in your browser.
-
-### `npm run lint`
-
-Runs `eslint` on the `src` folder. `eslint` is set up to use the recommended React settings.
-Additionally, `eslint` will attempt to fix trivial errors.
+All code in the project is formatted using `Prettier` to ensure a consistent code style
