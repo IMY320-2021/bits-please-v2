@@ -125,7 +125,7 @@ export default function Cart() {
                   ))}
                 </tbody>
               </table>
-              <h3 className="total">Total R{cartTotal}</h3>
+
               <button
                 className="nes-btn is-success checkOut"
                 type="button"
@@ -134,8 +134,9 @@ export default function Cart() {
                   onCloseModal();
                 }}
               >
-                Checkout
+                <text className="checkOutText">Checkout</text>
               </button>
+              <h3 className="total">Total R{cartTotal}</h3>
             </div>
           )}
         </Modal>
