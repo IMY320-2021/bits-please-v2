@@ -3,6 +3,7 @@
   display: grid;
   column-gap: 2rem;
   row-gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 0.5fr));
   /* background-color: var(--color-background); */
+  /* grid-template-columns: 1fr 1fr 1fr; */
 }

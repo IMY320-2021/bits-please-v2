@@ -23,9 +23,9 @@ export default function Home() {
             <i className="nes-icon is-medium is-half heart"></i>
             <i className="nes-icon is-medium is-transparent heart"></i>
           </section>
-          <h1>Bits Please</h1>
+          <text style={{ fontSize: 80 }}>Bits Please</text>
 
-          <ul style={{ paddingTop: "10%", paddingBottom: "10%" }}>
+          <ul style={{ paddingTop: "10%", paddingBottom: "5%" }}>
             <li>
               <Link
                 className="nes-btn is-primary"
