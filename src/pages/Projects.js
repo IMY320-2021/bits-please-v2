@@ -10,6 +10,7 @@ import Light from "../assets/images/project-images/light/light.png";
 import Blob from "../assets/images/project-images/blob/game-project-1.png";
 import HarmonyOne from "../assets/images/project-images/harmony/harmony-1.png";
 import GamingNation from "../assets/images/project-images/gaming-nation/gaming-nation.png";
+import AppImage from "../assets/images/project-images/app/app.png";
 
 const tagTypes = {
   game: {
@@ -17,7 +18,7 @@ const tagTypes = {
     type: "is-primary",
   },
   shortfilm: {
-    title: "Short Film",
+    title: "Video",
     type: "is-success",
   },
   web: {
@@ -93,6 +94,12 @@ const Projects = () => {
             data={ProjectDataFour}
           />
         )}
+        {state === "show-project-5" && (
+          <ProjectCard
+            viewProject={() => setState(`start`)}
+            data={ProjectDataFive}
+          />
+        )}
       </Layout>
     </div>
   );
@@ -102,6 +109,21 @@ export default Projects;
 
 const ProjectsData = {
   data: [
+    {
+      id: "app-01",
+      title: "Power Plant",
+      tags: [tagTypes.UiUx],
+      summary: "Mobile App UI/UX Development",
+      description: `A modern and clean app, keeping users informed with the latest loadshedding updates. `,
+      image_url: `${AppImage}`,
+      tech: [
+        {
+          name: "Adobe XD",
+          description:
+            "All design, prototyping and User Testing was done with a digital prototype made in Adobe XD. This includes wireframing, low-fidelity, and high-fidelity prototyping.",
+        },
+      ],
+    },
     {
       id: "mov-01",
       title: "Lost Connection",
@@ -237,3 +259,4 @@ const ProjectDataOne = ProjectsData.data[1];
 const ProjectDataTwo = ProjectsData.data[2];
 const ProjectDataThree = ProjectsData.data[3];
 const ProjectDataFour = ProjectsData.data[4];
+const ProjectDataFive = ProjectsData.data[5];

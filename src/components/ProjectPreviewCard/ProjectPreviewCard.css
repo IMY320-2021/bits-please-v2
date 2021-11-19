@@ -1,8 +1,8 @@
 .project-preview-card > img {
   width: 100%;
   object-fit: cover;
-  max-height: 354px;
-  object-position: center center;
+  max-height: 400px;
+  object-position: top center;
 }
 
 .project-preview-card {
