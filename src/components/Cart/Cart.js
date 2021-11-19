@@ -140,7 +140,7 @@ export default function Cart() {
               >
                 <text className="checkOutText">Checkout</text>
               </button>
-              <h3 className="total">Total R{cartTotal}</h3>
+              <h3 className="total">Total R{cartTotal.toFixed(2)}</h3>
             </div>
           )}
         </Modal>
