@@ -4,7 +4,6 @@ import Layout from "../components/Layout/Layout";
 import SignupForm from "../components/SignupForm/SignupForm";
 import SocialIcon from "../components/SocialIcon/SocialIcon";
 import Title from "../components/Title/Title";
-import backgroundIMG from "../assets/images/hadukenLeft.gif";
 
 const socialLinks = {
   social: [
