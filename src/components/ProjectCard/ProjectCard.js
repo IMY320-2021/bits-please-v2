@@ -20,9 +20,9 @@ const ProjectCard = ({ ...props }) => {
         <BadgeContainer data={data.tags} />
         <div className="project-card-body">
           <div>
-            <h5>The Project</h5>
+            <h5 className="color-blue">The Project</h5>
             <p>{data.description}</p>
-            <h5>Tech Stack</h5>
+            <h5 className="color-blue">Tech Stack</h5>
             {data.tech.map((tech, index) => {
               return (
                 <React.Fragment key={index}>
@@ -32,7 +32,7 @@ const ProjectCard = ({ ...props }) => {
               );
             })}
           </div>
-          <img src={data.image_url} alt={"undefined"} />
+          <img src={`${data.image_url}`} alt="project" />
         </div>
       </div>
     </>

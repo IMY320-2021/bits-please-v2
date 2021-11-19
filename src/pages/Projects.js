@@ -42,8 +42,8 @@ const Projects = () => {
     <div className="App">
       <Layout>
         <Title data={{ title: "Our Projects", colour: "color-blue" }} />
-        <Carousel data={ProjectsData.data} />
-        {/* {state === "start" && (
+        {/* <Carousel data={ProjectsData.data} /> */}
+        {state === "start" && (
           <React.Fragment>
             <div className="project-container">
               {ProjectsData.data.map((project, index) => {
@@ -93,7 +93,7 @@ const Projects = () => {
             viewProject={() => setState(`start`)}
             data={ProjectDataFour}
           />
-        )} */}
+        )}
       </Layout>
     </div>
   );

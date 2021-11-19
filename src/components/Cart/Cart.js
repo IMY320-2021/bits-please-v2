@@ -63,17 +63,25 @@ export default function Cart() {
             modal: "customModal",
           }}
         >
-          <h1>Cart ({totalItems})</h1>
+          <h3>Cart ({totalItems})</h3>
           {isEmpty ? (
             <p>Your cart is empty</p>
           ) : (
             <div>
               <table>
                 <thead>
-                  <th>Item </th>
-                  <th>Size </th>
-                  <th>Price each</th>
-                  <th>Quantity</th>
+                  <th>
+                    <h5>Item </h5>
+                  </th>
+                  <th>
+                    <h5>Size </h5>
+                  </th>
+                  <th>
+                    <h5>Price each</h5>
+                  </th>
+                  <th>
+                    <h5>Quantity</h5>
+                  </th>
                 </thead>
                 <tbody>
                   {items.map((item) => (
