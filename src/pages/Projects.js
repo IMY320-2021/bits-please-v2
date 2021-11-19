@@ -10,7 +10,6 @@ import Light from "../assets/images/project-images/light/light.png";
 import Blob from "../assets/images/project-images/blob/game-project-1.png";
 import HarmonyOne from "../assets/images/project-images/harmony/harmony-1.png";
 import GamingNation from "../assets/images/project-images/gaming-nation/gaming-nation.png";
-import Carousel from "../components/Carousel/Carousel";
 
 const tagTypes = {
   game: {

@@ -10,6 +10,7 @@ const BadgeContainer = ({ ...props }) => {
     <div className="badge-container">
       {data.map((tag, index) => {
         return (
+          // eslint-disable-next-line jsx-a11y/anchor-is-valid
           <a href={undefined} className="nes-badge" key={index}>
             <span className={`${tag.type}`}>{tag.title}</span>
           </a>
