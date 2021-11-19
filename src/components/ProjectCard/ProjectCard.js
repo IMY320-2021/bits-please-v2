@@ -12,7 +12,7 @@ const ProjectCard = ({ ...props }) => {
     <>
       <div className="project-card" onClick={props.viewProject}>
         <div className="project-card-header">
-          <h2 className="color-salmon">{data.title}</h2>{" "}
+          <h2 className="">{data.title}</h2>{" "}
           <button type="button" className="nes-btn">
             <i className="nes-icon close"></i>{" "}
           </button>
