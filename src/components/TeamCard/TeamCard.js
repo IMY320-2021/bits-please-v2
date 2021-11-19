@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import "./TeamCard.css";
 import SocialIcon from "../SocialIcon/SocialIcon";
+import BadgeContainer from "../BadgeContainer/BadgeContainer";
 
 const TeamCard = ({ ...props }) => {
   const data = props.data;
@@ -10,8 +11,9 @@ const TeamCard = ({ ...props }) => {
     <React.Fragment>
       <div className="team-card">
         {data.leftPosition && (
-          <div className="nes-container is-dark with-title">
-            <p className="title">{data.name}</p>
+          <div className="">
+            <h3 className="title">{data.name}</h3>
+            <BadgeContainer data={data.tags} />
             <div className="team-member-info-container-left">
               <div className="team-image-container">
                 <img src={data.image} alt={data.name} />
@@ -58,8 +60,9 @@ const TeamCard = ({ ...props }) => {
           </div>
         )}
         {!data.leftPosition && (
-          <div className="nes-container is-dark is-right with-title">
-            <p className="title">{data.name}</p>
+          <div className="">
+            <h5 className="title">{data.name}</h5>
+            <BadgeContainer data={data.tags} />
             <div className="team-member-info-container-right">
               <div className="nes-balloon from-right is-dark">
                 <p>{data.bio}</p>
@@ -110,6 +113,12 @@ TeamCard.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string.isRequired,
     bio: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(
+      PropTypes.shape({
+        type: PropTypes.string,
+        title: PropTypes.string,
+      })
+    ),
     skillsPrimary: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,
