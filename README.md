@@ -1,4 +1,5 @@
-![CodeQL](https://github.com/IMY320-2021/bits-please-v2/workflows/CodeQL/badge.svg)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/IMY320-2021/bits-please-v2/CodeQL?label=CodeQL&style=for-the-badge) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/IMY320-2021/bits-please-v2/Node.js%20CI?label=Node.js%20CI&style=for-the-badge)
+![Website](https://img.shields.io/website?down_color=red&down_message=offline&style=for-the-badge&up_message=online&url=https%3A%2F%2Fimy320-2021.github.io%2Fbits-please-v2%2F)
 
 # Bits Please
 
