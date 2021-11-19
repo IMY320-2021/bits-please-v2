@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import Title from "../components/Title/Title";
-
+import PacMan from "../components/PacMan/PacMan";
 export default function AboutUs() {
   return (
     <div className="App">
@@ -28,6 +28,7 @@ export default function AboutUs() {
           meticulously crafted to best suit the needs of our clients and the
           users.
         </p>
+        <PacMan />
       </Layout>
     </div>
   );
