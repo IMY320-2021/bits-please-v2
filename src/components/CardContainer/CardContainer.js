@@ -64,16 +64,12 @@ const StoreData = {
   ],
 };
 
-class CardContainer extends React.Component {
-  render() {
-    return (
-      <div className="card-container">
-        {StoreData.data.map((item) => {
-          return <Card key={item.id} data={item} />;
-        })}
-      </div>
-    );
-  }
+export default function CardContainer() {
+  return (
+    <div className="card-container">
+      {StoreData.data.map((item) => {
+        return <Card key={item.id} data={item} />;
+      })}
+    </div>
+  );
 }
-
-export default CardContainer;

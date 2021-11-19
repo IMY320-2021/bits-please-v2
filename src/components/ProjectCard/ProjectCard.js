@@ -9,28 +9,33 @@ const ProjectCard = ({ ...props }) => {
   const data = props.data;
 
   return (
-    <React.Fragment>
+    <>
       <div className="project-card" onClick={props.viewProject}>
         <div className="project-card-header">
-          <h4 className="color-salmon">{data.title}</h4>
+          <h2 className="color-salmon">{data.title}</h2>{" "}
           <button type="button" className="nes-btn">
-            <i className="nes-icon close"></i>
+            <i className="nes-icon close"></i>{" "}
           </button>
         </div>
         <BadgeContainer data={data.tags} />
-        <img src={data.image_url} alt={"undefined"} />
-        <p>{data.description}</p>
-        <h4 className="color-green">Tech Stack</h4>
-        {data.tech.map((tech, index) => {
-          return (
-            <React.Fragment key={index}>
-              <h6 className="color-yellow">{tech.name}</h6>
-              <p>{tech.description}</p>
-            </React.Fragment>
-          );
-        })}
+        <div className="project-card-body">
+          <div>
+            <h5>The Project</h5>
+            <p>{data.description}</p>
+            <h5>Tech Stack</h5>
+            {data.tech.map((tech, index) => {
+              return (
+                <React.Fragment key={index}>
+                  <h6 className="color-yellow">{tech.name}</h6>
+                  <p>{tech.description}</p>
+                </React.Fragment>
+              );
+            })}
+          </div>
+          <img src={data.image_url} alt={"undefined"} />
+        </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

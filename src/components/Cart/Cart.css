@@ -1,0 +1,17 @@
+/* examples/custom-styling.css */
+.customOverlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+.customModal {
+  background: #24292d;
+  width: 100%;
+  height: 60%;
+}
+
+.total {
+  text-align: right;
+}
+
+.checkOut {
+  float: right;
+}
