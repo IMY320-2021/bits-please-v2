@@ -85,6 +85,7 @@ export default function AboutUs() {
             <AboutUsCard key={data.title} data={data} />
           ))}
         </div>
+        <PacMan />
       </Layout>
     </div>
   );
