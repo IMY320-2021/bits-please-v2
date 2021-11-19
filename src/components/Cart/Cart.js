@@ -70,7 +70,11 @@ export default function Cart() {
           {isEmpty ? (
             <p>Your cart is empty</p>
           ) : (
-            <div>
+            <div
+              style={{
+                paddingTop: 20,
+              }}
+            >
               <table>
                 <thead>
                   <th>
