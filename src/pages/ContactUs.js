@@ -39,24 +39,10 @@ export default function ContactUs() {
         <SignupForm />
         <br />
         <h4>Our Links</h4>
-        <div
-          className="home-container"
-          style={{
-            backgroundImage: `url(${backgroundIMG})`,
-
-            /* Center and scale the image nicely */
-            "background-position": "center",
-            "background-repeat": "no-repeat",
-            "background-size": "cover",
-            paddingBottom: "2%",
-            paddingTop: "4%",
-          }}
-        >
-          <div className="social-link-container">
-            {socialLinks.social.map((social) => (
-              <SocialIcon key={social.name} data={social} />
-            ))}
-          </div>
+        <div className="social-link-container">
+          {socialLinks.social.map((social) => (
+            <SocialIcon key={social.name} data={social} />
+          ))}
         </div>
       </Layout>
     </div>
