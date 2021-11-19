@@ -6,7 +6,8 @@ import { useCart } from "react-use-cart";
 
 export default function Card({ data }) {
   const product = data;
-  const { addItem } = useCart();
+  const { addItem, inCart } = useCart();
+  const alreadyAdded = inCart(product.id);
 
   return (
     <div className="card">
@@ -29,7 +30,7 @@ export default function Card({ data }) {
           type="button"
           onClick={() => addItem(product)}
         >
-          ADD TO CART
+          {alreadyAdded ? "Add again" : "Add to Cart"}
         </button>
       </div>
     </div>
