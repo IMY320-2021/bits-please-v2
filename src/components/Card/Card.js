@@ -9,7 +9,7 @@ export default function Card({ data }) {
   const product = data;
   const { addItem, inCart } = useCart();
   const alreadyAdded = inCart(product.id);
-  const notify = () => toast.success("Added to Cart!");
+  const notify = () => toast.success("Added " + product.title + " to Cart!");
 
   return (
     <div className="card">
