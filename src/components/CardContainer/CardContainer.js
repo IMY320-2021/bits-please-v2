@@ -78,7 +78,7 @@ const StoreData = {
         { id: "ls-ts-01-m", stock: true, option: "M" },
         { id: "ls-ts-01-l", stock: true, option: "L" },
       ],
-    },
+    }
   ],
 };
 
