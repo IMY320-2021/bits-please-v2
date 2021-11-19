@@ -5,6 +5,8 @@ import { Modal } from "react-responsive-modal";
 import "../Cart/Cart.css";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+
 export default function Cart({ data }) {
   const { title, colour, location } = data;
   const temp = location !== undefined ? location : "/";
@@ -12,6 +14,8 @@ export default function Cart({ data }) {
   const [open, setOpen] = useState(false);
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
+
+  const notify = () => toast.success("Order placed!");
 
   const {
     isEmpty,
@@ -152,6 +156,7 @@ export default function Cart({ data }) {
                 className="nes-btn is-success checkOut"
                 type="button"
                 onClick={() => {
+                  notify();
                   emptyCart();
                   onCloseModal();
                 }}
@@ -159,6 +164,7 @@ export default function Cart({ data }) {
                 <text className="checkOutText">Checkout</text>
               </button>
               <h3 className="total">Total R{cartTotal.toFixed(2)}</h3>
+              <Toaster />
             </div>
           )}
         </Modal>
